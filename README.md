@@ -93,16 +93,5 @@ Deploy by **wordmove** https://github.com/welaika/wordmove support OS nad Linux
 
 ###### **go to style.css and change Version to bigger. For example: Version: 0.1.020 to Version: 0.1.021**
 
-- `wordmove push -t`
 
-#### Info
 
-- We just deploy payeye theme. Nothing more important !!!.
-- Plugins install and update manual via dashboard https://uatpayeye.wpengine.com/.
-- WP core please update via WP Engine provider. https://identity.wpengine.com/.
-
-#### UAT is ready. Go testing and if working go run Deploy UAT to PROD
-
-### Deploy UAT to PROD
-
-- `bash ./bin/deploy-uat-to-prod.sh`
