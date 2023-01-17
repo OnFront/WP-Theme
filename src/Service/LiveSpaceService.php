@@ -17,13 +17,6 @@ class LiveSpaceService
 {
     private const API_URL = 'https://payeye.livespace.io';
 
-    // USER API
-    private const API_KEY = '303d8njnn3gssgq0i2ug1ppu1cgxlp';
-    private const API_SECRET = 'wopz2ynllap13hi';
-
-    // Karolina Wierciuch
-    private const API_ADMIN_KEY = '0azgmp35l9sopn4pum51idlijo5cvg';
-    private const API_ADMIN_SECRET = '2vr1bdqficob1ez';
 
     private const SOURCE_API = 'Formularz zamówienia WWW';
 
