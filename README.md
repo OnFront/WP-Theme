@@ -85,13 +85,5 @@ Theme support MVC architecture by using own custom framework and **Timber** bund
 
 - Vanilla JS http://vanilla-js.com/
 
-# Deploy
-
-### Deploy theme to UAT
-
-Deploy by **wordmove** https://github.com/welaika/wordmove support OS nad Linux
-
-###### **go to style.css and change Version to bigger. For example: Version: 0.1.020 to Version: 0.1.021**
-
 
 
