@@ -1,0 +1,20 @@
+<div class="modal" {{ attr }}>
+    <div class="modal__dialog">
+        <div class="modal__content modal-video">
+
+            {{ svg(asset('icon/layout/close.svg'),'modal__close','data-js-close-modal') }}
+
+            <div class="modal-video__iframe-wrapper">
+                <iframe loading="lazy"
+                        title="PayEye"
+                        src="{{ src }}"
+                        width="560"
+                        height="315"
+                        allowfullscreen="allowfullscreen"
+                >
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+</div>

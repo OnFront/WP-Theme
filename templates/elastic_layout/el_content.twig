@@ -1,0 +1,13 @@
+<div class="el-content wow fadeIn" data-module="el-content">
+
+    {{ acf.content }}
+
+    {% if acf.image %}
+        <img class="el-content__image" src="{{ Image(acf.image) }}" alt="">
+    {% endif %}
+
+    {% if acf.youtube %}
+        <iframe class="el-content__youtube" width="420" height="315" src="{{ 'https://www.youtube.com/embed/' ~ youTube }}"></iframe>
+    {% endif %}
+
+</div>

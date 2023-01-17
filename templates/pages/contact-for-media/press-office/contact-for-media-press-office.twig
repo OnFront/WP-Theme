@@ -1,0 +1,19 @@
+<div class="contact-for-media-press-office">
+    <h2 class="mb-48 heading-xl">{{ acf.heading }}</h2>
+
+    <div class="mb-36 contact-for-media-press-office__body">
+        {% include 'shared/contact-data/contact-data.twig' with {acf: {
+            type: 'email',
+            contact: acf.email
+        }} %}
+
+        {% include 'shared/contact-data/contact-data.twig' with {acf: {
+            type: 'phone',
+            contact: acf.phone
+        }} %}
+    </div>
+
+    {% include 'shared/button-outlined/button-outlined.twig' with {
+        btn: acf.link
+    } %}
+</div>

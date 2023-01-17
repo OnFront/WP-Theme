@@ -1,0 +1,83 @@
+.business-zone-gallery {
+  margin-bottom: 6rem;
+
+  &__container {
+    display: grid;
+    grid-gap: 1.25rem;
+  }
+
+  &__image-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.125rem;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: .75rem;
+  }
+
+  &__description {
+    position: relative;
+    color: $green-400;
+    text-align: center;
+    padding: 3rem 2.5rem 2rem;
+
+    &:before,
+    &:after {
+      position: absolute;
+      z-index: -1;
+      content: '';
+      height: 100%;
+    }
+
+    &:before {
+      top: 0;
+      left: 1.5rem;
+      width: calc(100% - 1.5rem);
+      background-color: $green-100;
+      border-radius: .75rem;
+    }
+
+    &:after {
+      top: 1.5rem;
+      left: 0;
+      width: calc(100% - 1.5rem);
+      border-radius: .75rem;
+      border: 1px solid $green-400;
+    }
+  }
+
+  @include breakpoint-lg {
+    margin-bottom: 5.5rem;
+
+    &__container {
+      grid-template-columns: 4fr 8fr;
+    }
+
+    &__image {
+      border-radius: 1.5rem;
+      height: 100%;
+      object-fit: cover;
+      max-height: 16.25rem;
+
+      &--big {
+        max-height: 33.75rem;
+      }
+    }
+
+    &__description {
+      display: flex;
+      justify-content: center;
+      padding-top: 2.5rem;
+
+      &:after {
+        top: .875rem;
+      }
+    }
+
+    &__description-inner {
+      max-width: 51rem;
+    }
+  }
+}

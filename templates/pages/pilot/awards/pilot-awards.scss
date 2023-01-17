@@ -1,0 +1,41 @@
+.pilot-awards {
+  text-align: center;
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__title {
+    color: $color-secondary;
+  }
+
+  &__description {
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+
+  &__logo-wrapper {
+    margin-bottom: 1.2rem;
+  }
+
+  &__item {
+    margin-bottom: 3rem;
+  }
+
+  @include breakpoint-lg {
+
+    &__item {
+      width: 33%;
+      margin-bottom: 2rem;
+    }
+
+    &__logo-wrapper {
+      height: 12rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

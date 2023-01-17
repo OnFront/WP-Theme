@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block container %}
+
+    <div class="contact-for-media">
+        <div class="container contact-for-media__grid">
+            <div class="contact-for-media__card contact-for-media__card--data">
+                {% include 'pages/contact-for-media/about/contact-for-media-about.twig' with {acf: post.meta('about')} %}
+            </div>
+            <div class="contact-for-media__card contact-for-media__card--contact">
+                {% include 'pages/contact-for-media/press-office/contact-for-media-press-office.twig' with {acf: post.meta('press_office')} %}
+                {% include 'pages/contact-for-media/press-materials/contact-for-media-press-materials.twig' with {acf: post.meta('press_materials')} %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

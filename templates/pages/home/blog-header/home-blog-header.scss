@@ -1,0 +1,8 @@
+.home-blog-header {
+  text-align: center;
+
+  @include breakpoint-lg {
+    text-align: left;
+  }
+
+}

@@ -1,0 +1,22 @@
+<div class="pilot-icons">
+    <div class="container">
+        <div class="mb-48 mb-lg-94 heading-xl pilot-icons__header">{{ acf.header }}</div>
+
+        <div class="pilot-icons__items">
+            {% for acf in acf.items %}
+                <div class="pilot-icons__item">
+
+                    <div class="pilot-icons__icon-wrapper">
+                        <img class="pilot-icons__icon" src="" alt="" data-src="{{ acf.icon.url }}">
+                    </div>
+
+                    <div>
+                        <div class="heading-lg pilot-icons__title">{{ acf.title }}</div>
+                        <div class="wysiwyg">{{ acf.description }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>

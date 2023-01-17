@@ -1,0 +1,39 @@
+{
+  "name": "payeye/wp",
+  "description": "payeye theme",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.0",
+    "timber/timber": "^1.19",
+    "hellonico/timber-dump-extension": "^1.0",
+    "symfony/twig-bridge": "^5.2",
+    "symfony/dependency-injection": "^5.2",
+    "symfony/config": "^5.2",
+    "symfony/yaml": "^5.2",
+    "symfony/console": "^5.2",
+    "symfony/filesystem": "^5.2",
+    "ext-json": "*",
+    "symfony/dotenv": "^5.2",
+    "fusonic/opengraph": "^2.1",
+    "guzzlehttp/guzzle": "^7.3",
+    "http-interop/http-factory-guzzle": "^1.0",
+    "jms/serializer": "^3.12",
+    "twig/cache-extra": "^3.3",
+    "wp-cli/wp-cli": "^2.5",
+    "livespace/livespace-php": "dev-master"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "symfony/var-dumper": "^5.2"
+  },
+  "config": {
+    "platform-check": false,
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
+}

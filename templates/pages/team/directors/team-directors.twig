@@ -1,0 +1,24 @@
+<div class="team-directors">
+    <div class="container">
+        <div class="mb-48 mb-lg-0 heading-xl team-directors__heading">{{ acf.header }}</div>
+        <div class="team-directors__items">
+            {% for acf in acf.items %}
+                <div class="team-directors__item">
+                    <a class="team-directors__image-wrapper" href="{{ acf.linkedin }}" target="_blank">
+                        {% include 'shared/webp/webp.twig' with {
+                            class: 'team-directors__image',
+                        } %}
+                        <div class="team-directors__linkedin-box">
+                            {{ svg(asset('icon/social/linkedin-square.svg'),'team-directors__linkedin') }}
+                        </div>
+                    </a>
+                    <div>
+                        <div class="mb-12 heading-lg">{{ acf.heading }}</div>
+                        <div class="mb-16 team-directors__position">{{ acf.position }}</div>
+                        <div>{{ acf.descritpion }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

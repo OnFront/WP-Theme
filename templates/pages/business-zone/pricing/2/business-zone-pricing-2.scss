@@ -1,0 +1,77 @@
+.business-zone-pricing-2 {
+  position: relative;
+  text-align: center;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  &:before {
+    position: absolute;
+    top: 4.75rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 4.75rem);
+    content: '';
+    z-index: -1;
+    border: 1px solid $grey-300;
+    border-radius: .75rem;
+  }
+
+  &__inner {
+    max-width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__price {
+    color: $green-400;
+  }
+
+  &__monthly {
+    display: inline-block;
+    padding-top: .75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-top: 1px solid $grey-200;
+  }
+
+  &__items {
+    display: grid;
+    grid-gap: .75rem;
+  }
+
+  &__item {
+    display: grid;
+    grid-gap: .75rem;
+  }
+
+  &__item-icon {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__regular-price {
+    text-decoration: line-through;
+  }
+
+  &__image {
+    width: 12.5rem;
+  }
+
+  @include breakpoint-lg {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 4.375rem;
+
+    &:before {
+      top: 9.75rem;
+      height: calc(100% - 9.75rem);
+    }
+
+    &__item {
+      grid-template-columns: auto 1fr;
+      text-align: left;
+    }
+  }
+}

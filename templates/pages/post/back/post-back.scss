@@ -1,0 +1,18 @@
+.post-back {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: $navy-800;
+
+  &__arrow {
+    border-color: $navy-800;
+    margin-right: .75rem;
+  }
+
+  &__driver {
+    width: calc(100% - 15rem);
+    height: 1px;
+    background-color: $color-grey;
+    margin-left: 2.25rem;
+  }
+}

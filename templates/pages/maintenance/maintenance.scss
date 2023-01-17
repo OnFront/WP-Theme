@@ -1,0 +1,41 @@
+.maintenance {
+  margin: 5rem 0;
+
+  &__logo {
+    margin: 0 auto 3.2rem auto;
+    max-width: 15rem;
+  }
+
+  &__image {
+    margin: 0 auto 1.875rem auto;
+    max-width: 50rem;
+  }
+
+  &__footer-counter {
+    animation: maintenanceFadeIn 1.5s infinite ease-in-out;
+  }
+
+  &__link {
+    color: $green-400;
+    transition: color ease-in-out .3s;
+    text-decoration: none;
+
+    &:hover {
+      color: $green-500;
+    }
+  }
+
+  @keyframes maintenanceFadeIn {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(0.92);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+}

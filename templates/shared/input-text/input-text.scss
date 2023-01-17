@@ -1,0 +1,19 @@
+.input-text {
+  background: $color-white;
+  border: 1px solid $grey-200;
+  border-radius: .375rem;
+  padding: .813rem 1rem .813rem 1rem;
+  font-family: $font-family-point;
+  color: $navy-600;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1;
+
+  &::placeholder {
+    font-family: $font-family-point;
+    color: $navy-800;
+    opacity: .3;
+    font-size: 1rem;
+    line-height: 1;
+  }
+}

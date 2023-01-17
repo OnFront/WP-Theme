@@ -1,0 +1,19 @@
+<div class="donation">
+
+    <h1 class="mb-32 mb-lg-48 heading-xl donation__header">{{ acf.header }}</h1>
+
+    <div class="donation__grid">
+        {% for acf in acf.items %}
+            <div>
+                <div class="donation__content wysiwyg wow fadeIn">{{ acf.content }}</div>
+
+                <div class="donation__gallery wow fadeIn">
+                    {% for logo in acf.gallery %}
+                        <img class="donation__logo" src="{{ Image(logo) }}" alt="">
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</div>

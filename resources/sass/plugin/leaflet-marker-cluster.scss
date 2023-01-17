@@ -1,0 +1,180 @@
+//TODO ładnie to ogarnać
+
+.marker-cluster-small {
+  background-color: $color-secondary;
+}
+
+.marker-cluster-small div {
+  background-color: $color-secondary;
+}
+
+.marker-cluster-medium {
+  background-color: $color-secondary;
+}
+
+.marker-cluster-medium div {
+  background-color: $color-secondary;
+}
+
+.marker-cluster-large {
+  background-color: $color-secondary;
+}
+
+.marker-cluster-large div {
+  background-color: $color-secondary;
+}
+
+/* IE 6-8 fallback colors */
+.leaflet-oldie .marker-cluster-small {
+  background-color: rgb(181, 226, 140);
+}
+
+.leaflet-oldie .marker-cluster-small div {
+  background-color: rgb(110, 204, 57);
+}
+
+.leaflet-oldie .marker-cluster-medium {
+  background-color: rgb(241, 211, 87);
+}
+
+.leaflet-oldie .marker-cluster-medium div {
+  background-color: rgb(240, 194, 12);
+}
+
+.leaflet-oldie .marker-cluster-large {
+  background-color: rgb(253, 156, 115);
+}
+
+.leaflet-oldie .marker-cluster-large div {
+  background-color: rgb(241, 128, 23);
+}
+
+.marker-cluster {
+  background-clip: padding-box;
+  border-radius: 20px;
+}
+
+.marker-cluster div {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-top: 5px;
+
+  text-align: center;
+  border-radius: 15px;
+  font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.marker-cluster span {
+  line-height: 30px;
+}
+
+.marker-cluster {
+  span {
+    line-height: 30px !important;
+    color: white !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+
+  }
+}
+
+.leaflet-cluster-anim .leaflet-marker-icon, .leaflet-cluster-anim .leaflet-marker-shadow {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-in;
+}
+
+.leaflet-cluster-spider-leg {
+  transition: stroke-dashoffset 0.3s ease-out, stroke-opacity 0.3s ease-in;
+}
+
+.fullscreen-icon {
+  background-image: url($icon-full-screen);
+}
+
+.leaflet-control-locate .leaflet-bar-part {
+  background-image: url($icon-location);
+}
+
+#map {
+  .leaflet-top {
+    left: unset;
+    top: unset;
+    right: 1.5rem;
+    bottom: 2rem;
+  }
+
+  .leaflet-control-zoom,
+  .leaflet-control-locate,
+  .leaflet-control-fullscreen {
+    border: 0;
+  }
+
+
+}
+
+.leaflet-touch .leaflet-bar a {
+  width: 2.625rem !important;
+  height: 2.625rem !important;
+  border: 0 !important;
+  box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 4px !important;
+  transition: all ease-in-out .4s;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Point';
+}
+
+.leaflet-touch .leaflet-bar a:first-child,
+.leaflet-touch .leaflet-bar a:last-child {
+  margin-bottom: 4px !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 1.875rem;
+  font-family: 'Point';
+}
+
+.leaflet-control-zoom {
+  margin-bottom: 2rem !important;
+}
+
+.leaflet-top .leaflet-control {
+  margin-top: 0 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  font-family: 'Point';
+}
+
+.leaflet-popup-content-wrapper .leaflet-popup-content {
+  font-family: 'Point';
+}
+
+.leaflet-popup-tip-container {
+  font-family: 'Point';
+}
+
+.leaflet-popup-content {
+  margin: 2.4rem !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  top: 12px !important;
+  right: 12px !important;
+}
+
+.leaflet-popup-tip-container {
+  display: none !important;
+}
+
+.leaflet-control-zoom a {
+  margin-bottom: 4px !important;
+}
+
+.leaflet-popup-pane {
+  pointer-events: none;
+  display: none;
+}

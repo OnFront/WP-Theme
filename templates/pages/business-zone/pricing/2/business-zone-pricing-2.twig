@@ -1,0 +1,27 @@
+<div class="business-zone-pricing-2">
+    {% include 'shared/webp/webp.twig' with {
+        class: 'mb-12 mb-lg-32 business-zone-pricing-2__image'
+    } %}
+    <div class="business-zone-pricing-2__inner">
+        <div class="mb-08">{{ acf.available }}</div>
+        <div class="mb-08 heading-xl">{{ acf.heading }}</div>
+        <div class="mb-32">{{ acf.description }}</div>
+        <div class="mb-48 mb-lg-32 business-zone-pricing-2__items">
+            {% for acf in acf.items %}
+                <div class="business-zone-pricing-2__item">
+                    {{ svg(asset('icon/li-check-circle.svg'),'business-zone-pricing-2__item-icon') }}
+                    {{ acf.text }}
+                </div>
+            {% endfor %}
+        </div>
+        {% include 'shared/webp/webp.twig' with {
+            image: acf.paymentImage,
+            class: 'mb-24 w-100'
+        } %}
+
+        <div class="heading-md business-zone-pricing-2__regular-price">{{ acf.priceConst }}</div>
+        <div class="mb-24 heading-xl business-zone-pricing-2__price">{{ acf.price }}</div>
+        <div class="mb-48 business-zone-pricing-2__monthly">{{ t.monthly|t }}</div>
+        <div class="wysiwyg paragraph-sm">{{ acf.information }}</div>
+    </div>
+</div>

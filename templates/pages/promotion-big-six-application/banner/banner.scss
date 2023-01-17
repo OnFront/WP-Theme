@@ -1,0 +1,76 @@
+.big-six-banner {
+    padding: 2rem 0 2.875rem 0;
+
+    &__col--content {
+        margin-bottom: 2.4rem;
+    }
+    
+    &__col--image img {
+        width: 100%;
+    }
+
+    &__header {
+        margin-bottom: 1.5rem;
+    }
+
+    &__heading {
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+    }
+
+    &__description {
+        color: $navy-800;
+    }
+
+    &__list {
+        list-style-type: none;
+
+        &-heading {
+            margin-bottom: 1.5rem;
+        }
+        
+        &-item {
+            display: grid;
+            grid-template-columns: 2rem auto;
+            margin-bottom: 0.75rem;
+            color: $navy-800;
+        }
+
+        &-icon {
+            width: 1.125rem;
+            height: 1.125rem;
+        }
+    }
+
+    @include breakpoint-lg {
+        padding: 6rem 0 2.875rem 0;
+        
+        .container {
+            display: flex;
+            gap: 1.25rem;
+            padding-left: 6.25rem;
+        }
+
+        &__col {
+            width: 50%;
+        }
+
+        &__col--content {
+            margin-bottom: 0;
+            max-width: 23.75rem;
+        }
+    
+        &__col--image {
+            display: block;
+        }
+
+        &__header {
+            margin-bottom: 2.25rem;
+        }
+
+        &__heading {
+            font-size: 3.375rem;
+            line-height: 3.875rem;
+        }
+    }
+}

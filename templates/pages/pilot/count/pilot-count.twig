@@ -1,0 +1,37 @@
+<div class="pilot-count">
+    <div class="container">
+        <div class="pilot-count__grid pilot-count__grid--3 wow fadeIn">
+            {% for acf in acf.items %}
+                {% if loop.index <= 3 %}
+                    <div>
+                        <div class="pilot-count__count-wrapper">
+                            <div class="mb-24 mb-lg-12 pilot-count__count">
+                                {{ acf.count }}
+                                <div class="pilot-count__count-stroke">{{ acf.count }}</div>
+                            </div>
+                        </div>
+                        <div class="mb-24 mb-lg-12 heading-lg">{{ acf.heading }}</div>
+                        <div class="pilot-count__description">{{ acf.description }}</div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="pilot-count__grid pilot-count__grid--2 wow fadeIn">
+            {% for acf in acf.items %}
+                {% if loop.index >= 4 %}
+                    <div>
+                        <div class="pilot-count__count-wrapper">
+                            <div class="pilot-count__count">
+                                {{ acf.count }}
+                                <div class="pilot-count__count-stroke">{{ acf.count }}</div>
+                            </div>
+                        </div>
+                        <div class="mb-24 mb-lg-12 heading-lg">{{ acf.heading }}</div>
+                        <div class="pilot-count__description">{{ acf.description }}</div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,21 @@
+<div class="faq-accordion">
+    {% for post in posts %}
+
+        {% set faqTerm = post.terms({
+            query : {
+                taxonomy: 'service',
+            }
+        }) %}
+
+        <div class="faq-accordion__card {{ isDisableAnimate?'':'wow fadeIn' }} " data-faq-term-id="{{ faqTerm|first.id }}" data-faq-id="{{ post.ID }}">
+            <div data-accordion="faq-accordion-{{ loop.index }}">
+                <div class="faq-accordion__title" data-accordion-header>
+                    <div class="faq-accordion__title-span">{{ post.title }} </div>
+                    <span class="plus"></span>
+                </div>
+                <div class="faq-accordion__content" data-accordion-body>{{ post.content }}</div>
+            </div>
+        </div>
+
+    {% endfor %}
+</div>

@@ -1,0 +1,13 @@
+.courses-list {
+    padding-top: 4rem;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @include breakpoint-lg {
+        padding-top: 7rem;
+    }
+}

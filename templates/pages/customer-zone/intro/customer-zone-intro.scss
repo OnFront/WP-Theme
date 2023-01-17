@@ -1,0 +1,35 @@
+.customer-zone-intro {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  &__image {
+    width: calc(100% - 2rem);
+  }
+
+  @include breakpoint-lg {
+    text-align: left;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    &__body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 6rem;
+      align-items: center;
+    }
+
+    &__content {
+      max-width: 32rem;
+      padding-left: 6rem;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    picture {
+      order: 2;
+    }
+  }
+}

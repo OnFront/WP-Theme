@@ -1,0 +1,143 @@
+.custom-select {
+  $block: '.custom-select';
+
+  &-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+  }
+
+  &__trigger {
+    position: relative;
+    padding: .813rem 1rem .813rem 3rem;
+    color: $navy-600;
+    background: #ffffff;
+    cursor: pointer;
+    border: 1px solid $grey-200;
+    border-radius: .375rem;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+
+    &--placeholder {
+      color: $grey-300
+    }
+
+    &--with-triangle {
+      padding-left: 1rem;
+    }
+
+    [readonly] {
+      user-select: none;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid $grey-200;
+    border-top: 0;
+    background: #fff;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+    border-radius: 0 0 .375rem .375rem;
+    max-height: 18.75rem;
+    overflow-y: scroll;
+    text-align: left;
+  }
+
+  &__option {
+    position: relative;
+    display: block;
+    padding: .8rem 1.2rem;
+    font-size: 1rem;
+    color: $navy-600;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(39, 36, 69, 0.07);
+    }
+
+    &.selected {
+      color: $green-400;
+      background-color: rgba(0, 173, 147, 0.1);
+    }
+
+  }
+
+  &__input-search {
+    border: 0;
+    padding: 0;
+    font-size: 1rem;
+    width: 100%;
+    background-color: transparent;
+    font-family: $font-family-point;
+    color: $navy-600;
+
+    &::placeholder {
+      font-family: $font-family-point;
+      color: $navy-800;
+      opacity: .3;
+      font-size: 1rem;
+      line-height: 1;
+    }
+  }
+
+  &__icon-svg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+  }
+
+  &__icon-svg {
+    fill: $color-white;
+  }
+
+  &__tag {
+    font-weight: 700;
+    color: $navy-800;
+  }
+
+  &.open {
+    z-index: 9;
+
+    #{$block} {
+      &__trigger {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      &__options {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+    }
+  }
+
+  &.search {
+    #{$block} {
+      &__option {
+        color: $navy-100;
+        font-weight: 300;
+      }
+
+      &__tag {
+        color: $navy-800;
+        font-weight: 900;
+      }
+    }
+  }
+}

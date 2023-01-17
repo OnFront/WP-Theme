@@ -1,0 +1,53 @@
+@import "mixin/heading";
+
+@mixin component-header {
+  font-size: 2.75rem;
+  font-weight: 900;
+  line-height: 1;
+  color: $color-primary;
+  margin-bottom: 1.2rem;
+  @include breakpoint-xl {
+    margin-bottom: 2.5rem;
+    font-size: 3.2rem;
+  }
+
+  span,
+  b {
+    color: $color-secondary;
+  }
+}
+
+@mixin component-title {
+  font-size: 2.4rem;
+  color: $color-primary;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  @include breakpoint-xl {
+    margin-bottom: 2rem;
+  }
+}
+
+@mixin component-title-with-border {
+  position: relative;
+  @include component-title;
+  text-align: center;
+  margin-bottom: 2rem;
+  @include breakpoint-lg {
+    text-align: left;
+  }
+
+  &:before {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 8rem;
+    height: .4rem;
+    content: '';
+    background-color: $color-secondary;
+
+    @include breakpoint-lg {
+      transform: translate(0, 0);
+    }
+  }
+}

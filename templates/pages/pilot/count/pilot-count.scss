@@ -1,0 +1,61 @@
+.pilot-count {
+  padding-bottom: 3rem;
+  text-align: center;
+
+  &__grid {
+    display: grid;
+    margin-bottom: 3.125rem;
+    grid-gap: 3.125rem;
+  }
+
+  &__count-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__count {
+    position: relative;
+    font-weight: 800;
+    color: $color-secondary;
+    font-size: 5rem;
+    line-height: 5.25rem;
+    font-family: $font-family-point;
+  }
+
+  &__count-stroke {
+    position: absolute;
+    top: -1.875rem;
+    left: -1.25rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: $green-400;
+    -webkit-text-stroke-width: 1px;
+    opacity: .5;
+  }
+
+  &__description {
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+
+  @include breakpoint-lg {
+    padding-bottom: 4rem;
+
+    &__grid {
+      &--3 {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 5rem;
+      }
+
+      &--2 {
+        grid-template-columns: 1fr 1fr;
+        max-width: 98rem;
+        margin: 0 auto;
+      }
+    }
+    &__count {
+      font-size: 6.75rem;
+      line-height: 8.125rem;
+    }
+  }
+}

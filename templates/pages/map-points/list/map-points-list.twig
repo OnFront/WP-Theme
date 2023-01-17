@@ -1,0 +1,31 @@
+{# @var branch \App\Core\Post\Merchant\Branch #}
+{# @var merchant \App\Core\Post\MerchantPost #}
+
+<div class="map-points-list">
+    {% for merchant in partnersPosts %}
+        {% for branch in merchant.branches %}
+
+            {% if not branch.disableBranch %}
+                {% set isEnablePromo = merchant.promotion.enable and not branch.disablePromotion ? 1 : 0 %}
+                <div class="map-points-list__card"
+                     data-partner-id="{{ branch.id }}"
+                     data-term-id="{{ merchant.terms|first.ID }}"
+                     data-is-promo="{{ isEnablePromo }}"
+                >
+                    {% if isEnablePromo %}
+                        {{ svg(asset('icon/map/partner/promo.svg'),'map-points-list__icon') }}
+                    {% else %}
+                        {{ svg(asset('icon/map/partner/standard.svg'),'map-points-list__icon') }}
+                    {% endif %}
+
+                    <div>
+                        <div class="mb-04 heading-xs" data-js-merchant-title>{{ merchant.title }}</div>
+                        <div class="heading-xxs">{{ branch.address.street }}, {{ branch.address.city }}</div>
+                    </div>
+                </div>
+            {% endif %}
+
+        {% endfor %}
+    {% endfor %}
+    <div class="map-points-list__card" data-no-result style="display: none;">{{ t.mapPointsNotResult }}</div>
+</div>

@@ -1,0 +1,32 @@
+<div class="business-zone-eye-pos-color" data-js-business-zone-eye-pos-color>
+    <div class="container business-zone-eye-pos-color__container">
+
+        <div class="mb-48 mb-lg-0 business-zone-eye-pos-color__image-wrapper">
+            {% include 'shared/webp/webp.twig' with {
+                image: acf.items|first.image,
+                class: 'business-zone-eye-pos-color__image-static'
+            } %}
+
+            {% for acf in acf.items %}
+                {% include 'shared/webp/webp.twig' with {
+                    class: 'business-zone-eye-pos-color__image',
+                    attr: 'data-js-color=' ~ acf.color,
+                    classPicture: 'business-zone-eye-pos-color__picture ' ~ (loop.first ? 'business-zone-eye-pos-color__picture--active')
+                } %}
+            {% endfor %}
+        </div>
+
+        <div class="business-zone-eye-pos-color__content">
+            <div class="mb-64 mb-lg-42 business-zone-eye-pos-color__color-items">
+                {% for acf in acf.items %}
+                    <button style="background-color: {{ acf.color }};" data-js-color-id="{{ acf.color }}"
+                            class="business-zone-eye-pos-color__button {{ loop.first ? 'business-zone-eye-pos-color__button--active' }}"></button>
+                {% endfor %}
+            </div>
+
+            <div class="mb-24 mb-lg-16 heading-xl">{{ acf.heading }}</div>
+            <div class="mb-64 mb-lg-42">{{ acf.description }}</div>
+        </div>
+
+    </div>
+</div>

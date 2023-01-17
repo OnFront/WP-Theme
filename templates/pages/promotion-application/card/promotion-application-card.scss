@@ -1,0 +1,24 @@
+.promotion-application-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: self-start;
+  grid-gap: 1.75rem;
+  text-decoration: none;
+  color: $navy-600;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid $grey-100;
+  margin-bottom: 1.5rem;
+  text-align: left;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &__logo {
+    width: 5rem;
+  }
+
+  &__discount {
+    color: $green-400;
+  }
+}

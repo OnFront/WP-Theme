@@ -1,0 +1,101 @@
+.mb-04 {
+  margin-bottom: .25rem;
+}
+
+.mb-08 {
+  margin-bottom: .5rem;
+}
+
+.mb-12 {
+  margin-bottom: .75rem;
+}
+
+.mb-16 {
+  margin-bottom: 1rem;
+}
+
+.mb-20 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-24 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-32 {
+  margin-bottom: 2rem;
+}
+
+.mb-36 {
+  margin-bottom: 2.25rem;
+}
+
+.mb-42 {
+  margin-bottom: 2.625rem;
+}
+
+.mb-48 {
+  margin-bottom: 3rem;
+}
+
+.mb-54 {
+  margin-bottom: 3.375rem;
+}
+
+.mb-64 {
+  margin-bottom: 4rem;
+}
+
+.mb-96 {
+  margin-bottom: 6rem;
+}
+
+@include breakpoint-lg {
+  .mb-lg-0 {
+    margin-bottom: 0;
+  }
+
+  .mb-lg-04 {
+    margin-bottom: .25rem;
+  }
+
+  .mb-lg-08 {
+    margin-bottom: .5rem;
+  }
+
+  .mb-lg-12 {
+    margin-bottom: .75rem;
+  }
+
+  .mb-lg-16 {
+    margin-bottom: 1rem;
+  }
+
+  .mb-lg-24 {
+    margin-bottom: 1.5rem;
+  }
+
+  .mb-lg-32 {
+    margin-bottom: 2rem;
+  }
+
+  .mb-lg-42 {
+    margin-bottom: 2.625rem;
+  }
+
+  .mb-lg-48 {
+    margin-bottom: 3rem;
+  }
+
+  .mb-lg-64 {
+    margin-bottom: 4rem;
+  }
+
+  .mb-lg-70 {
+    margin-bottom: 4.375rem;
+  }
+
+  .mb-lg-94 {
+    margin-bottom: 5.875rem;
+  }
+}

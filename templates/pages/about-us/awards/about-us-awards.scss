@@ -1,0 +1,51 @@
+.about-us-awards {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem 1.5rem;
+    justify-content: center;
+  }
+
+  &__item {
+    display: grid;
+    grid-gap: 1rem;
+    margin: 0 auto;
+    max-width: 22rem;
+  }
+
+  &__logo {
+    height: 7.8125rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  @include breakpoint-lg {
+    margin-bottom: 5rem;
+
+    &__item {
+      width: calc(33% - 2rem);
+    }
+  }
+
+  @include breakpoint-xxl {
+
+    &__grid {
+      gap: 4rem 2.5rem;
+    }
+
+    &__item {
+      width: calc(25% - 2rem);
+    }
+
+    &__logo {
+      object-fit: cover;
+    }
+
+    &__item {
+      margin: 0;
+    }
+  }
+}

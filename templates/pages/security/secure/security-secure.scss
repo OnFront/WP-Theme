@@ -1,0 +1,26 @@
+.security-secure {
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+
+  &__header {
+    text-align: center;
+  }
+
+  &__content {
+    max-width: 61.25rem;
+    margin: 0 auto;
+    text-align: center;
+
+    ol {
+      margin-bottom: 1.5rem;
+      list-style-position: inside;
+    }
+
+  }
+
+  @include breakpoint-lg {
+    &__content {
+      text-align: left;
+    }
+  }
+}

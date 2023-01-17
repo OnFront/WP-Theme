@@ -1,0 +1,73 @@
+.customer-zone-discount {
+  text-align: center;
+  position: relative;
+  padding-bottom: 3rem;
+  overflow: hidden;
+
+  &__field {
+    position: relative;
+    padding-bottom: 3rem;
+
+    &:before {
+      position: absolute;
+      top: 11rem;
+      left: -50vw;
+      width: 150vw;
+      height: calc(100% - 11rem);
+      content: '';
+      background-color: $green-100;
+      z-index: -1;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 26.75rem;
+  }
+
+  @include breakpoint-lg {
+    text-align: left;
+    margin-bottom: 4rem;
+
+    &:before {
+      position: absolute;
+      top: 12rem;
+      left: 0;
+      width: 50%;
+      height: calc(100% - 12rem);
+      content: '';
+      background-color: $green-100;
+      z-index: -1;
+      border-radius: 0 1.5rem 1.5rem 0;
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-start;
+      grid-gap: 4rem;
+    }
+
+    &__field {
+      padding-bottom: 2rem;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    &__field-discounts {
+      margin-top: 12rem;
+    }
+
+    &__content {
+      max-width: 30rem;
+    }
+
+    &__items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<div class="about-us-icon-payeye">
+    <div class="container">
+
+        <div class="about-us-icon-payeye__items">
+            {% for acf in acf.items %}
+                <div>
+                    <div class="mb-24 mb-lg-48 about-us-icon-payeye__icon-wrapper">
+                        <img src="{{ acf.icon }}" alt="">
+                    </div>
+                    <div class="mb-12 mb-lg-24 heading-md about-us-icon-payeye__heading">{{ acf.heading }}</div>
+                    <div class="">{{ acf.description }}</div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>

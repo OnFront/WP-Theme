@@ -1,0 +1,50 @@
+.customer-zone-discount-card {
+  text-align: left;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $grey-200;
+  text-decoration: none;
+  transition: background-color ease-in-out .333s;
+
+  &__logo {
+    margin-right: 1.25rem;
+    width: 4rem;
+  }
+
+  &__content {
+    margin-right: .875rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__address {
+    color: $navy-600;
+  }
+
+  @include breakpoint-lg {
+    border-radius: 12px;
+    border: 1px solid $green-400;
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      background-color: $green-100;
+    }
+
+    &__logo {
+      width: 5rem;
+    }
+
+    &__content {
+      flex-grow: 1;
+    }
+
+    &__address {
+      flex-grow: 1;
+    }
+  }
+}

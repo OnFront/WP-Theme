@@ -1,0 +1,34 @@
+$col-xs: 320px;
+$col-sm: 567px;
+$col-md: 768px;
+$col-lg: 992px;
+$col-xl: 1240px;
+$col-xxl: 1360px;
+
+$container: (xs: 100%, sm: 30rem, md: 46.25rem, lg: calc(100% - 3rem), xl: 75.625rem, xxl: 76.875rem);
+
+$breakpoints: (xs: $col-xs, sm: $col-sm, md: $col-md, lg: $col-lg, xl: $col-xl, xxl: $col-xxl);
+$grid-columns: 12;
+$grid-gutter: 1rem;
+
+$header-mobile: 75rem;
+
+@mixin grid-breakpoint($point, $breakpoints) {
+  @each $key, $value in $breakpoints {
+    @if $point == $key {
+      @media only screen and (min-width: #{$value}) {
+        @content;
+      }
+    }
+  }
+}
+
+@each $key, $value in $container {
+  @include grid-breakpoint($key, $breakpoints) {
+    .container {
+      width: $value;
+    }
+  }
+}
+
+@import "mixin/breakpoint";

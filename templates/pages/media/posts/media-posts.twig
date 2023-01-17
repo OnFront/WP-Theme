@@ -1,0 +1,26 @@
+<div class="media-articles" data-posts>
+    {% set mainSort = post.meta('filter').mainSort %}
+
+    <div data-selected>
+        <div class="heading-lg media-articles__header">{{ t.mediaSelectedForYou|t }}</div>
+        <div class="media-articles__body">
+            {% set loopIndex = 0 %}
+            {% for posts in selectedPosts %}
+                {% for post in posts %}
+                    {% set loopIndex = loopIndex + 1 %}
+                    {% include 'pages/media/selected/media-selected.twig' %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div data-all>
+        <div class="heading-lg media-articles__header">{{ t.mediaAll|t }}</div>
+        <div class="media-articles__body">
+            {% for post in mediaPosts %}
+                {% include 'pages/media/article/media-article.twig' %}
+            {% endfor %}
+        </div>
+    </div>
+
+</div>

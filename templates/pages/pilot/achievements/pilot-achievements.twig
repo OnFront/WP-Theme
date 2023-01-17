@@ -1,0 +1,37 @@
+<div class="pilot-achievements">
+    <div class="container">
+
+        <div class="pilot-achievements__body">
+            <div class="pilot-achievements__image-wrapper">
+
+                <div class="d-lg-none">
+                    {% include 'shared/webp/webp.twig' with {
+                        image: acf.imageMobile,
+                        class: 'pilot-achievements__image',
+                    } %}
+                </div>
+
+                <div class="d-none d-lg-block">
+                    {% include 'shared/webp/webp.twig' with {
+                        class: 'pilot-achievements__image',
+                    } %}
+                </div>
+
+            </div>
+            <div>
+                <div>
+                    {% for acf in acf.items %}
+                        <div class="pilot-achievements__item">
+                            <div class="mb-lg-08 heading-xl pilot-achievements__value">{{ acf.value }}</div>
+                            <div>{{ acf.description }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div>
+                    <div class="pilot-achievements__claim">{{ acf.claim }}</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

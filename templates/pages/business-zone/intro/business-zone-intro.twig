@@ -1,0 +1,15 @@
+<div class="business-zone-intro" data-js-business-zone-intro>
+    <div class="container business-zone-intro__body">
+        {% include 'shared/webp/webp.twig' with {
+            class: 'business-zone-intro__image mb-24 mb-lg-0',
+            classPicture: 'business-zone-intro__picture'
+        } %}
+        <div class="business-zone-intro__content">
+            <h1 class="heading-xl mb-24 mb-lg-16">{{ acf.heading }}</h1>
+            <div class="mb-24">{{ acf.description }}</div>
+            {% include 'shared/button-solid/button-solid.twig' with {
+                attr: 'data-js-scroll-to'
+            } %}
+        </div>
+    </div>
+</div>

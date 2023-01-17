@@ -1,0 +1,17 @@
+<div class="business-zone-benefits">
+    <div class="container">
+        <h4 class="mb-24 heading-xl">{{ acf.heading }}</h4>
+        <div class="mb-48 mb-lg-64">{{ acf.description }}</div>
+    </div>
+    <div class="business-zone-benefits__body">
+        <div class="container business-zone-benefits__items">
+            {% for acf in acf.items %}
+                <div class="business-zone-benefits__item">
+                    <img class="mb-24" src="{{ acf.image.url }}" alt="">
+                    <div class="mb-24 heading-md business-zone-benefits__item-heading">{{ acf.heading }}</div>
+                    <div class="">{{ acf.description }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

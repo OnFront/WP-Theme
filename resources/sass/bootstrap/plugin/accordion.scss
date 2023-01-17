@@ -1,0 +1,20 @@
+[data-accordion] {
+
+  &.accordion-open [data-accordion-body] {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  [data-accordion-header] {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  [data-accordion-body] {
+    opacity: 0;
+    transition: all ease-in-out .4s;
+    pointer-events: none;
+    overflow: hidden;
+  }
+}

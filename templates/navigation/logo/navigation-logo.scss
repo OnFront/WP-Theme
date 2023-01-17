@@ -1,0 +1,8 @@
+.navigation-logo {
+
+  @include breakpoint-xxl {
+    &__logo {
+      width: 11.25rem;
+    }
+  }
+}

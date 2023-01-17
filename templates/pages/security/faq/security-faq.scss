@@ -1,0 +1,11 @@
+.security-faq {
+  padding-top: 4rem;
+
+  &__container {
+    max-width: 52rem;
+  }
+
+  @include breakpoint-lg {
+    padding-top: 5rem;
+  }
+}

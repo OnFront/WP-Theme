@@ -1,0 +1,22 @@
+<nav class="navigation-mobile" data-js-navigation-mobile>
+
+    <div class="navigation-mobile__body">
+
+        <div class="navigation-mobile__header">
+            <div></div>
+            {% include 'navigation/logo/navigation-logo.twig' %}
+            {% include 'navigation/hamburger/hamburger.twig' %}
+        </div>
+
+        <div class="navigation-mobile__inner-wrapper">
+            {% include 'navigation/mobile-menu/navigation-mobile-menu.twig' %}
+            <div class="mb-24">{% include 'shared/join-to-payeye/join-to-payeye.twig' %}</div>
+            <div class="mb-48">{% include 'shared/language/language.twig' %}</div>
+            <a href="{{ store.theme.footer.donationPageUrl }}">
+                <img src="{{ asset('icon/menu/'~ translator.current ~'/eu-square.svg') }}" alt="">
+            </a>
+        </div>
+
+    </div>
+
+</nav>

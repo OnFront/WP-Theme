@@ -1,0 +1,29 @@
+<div class="business-zone-pricing-1" data-js-business-zone-pricing-1>
+    {% include 'shared/webp/webp.twig' with {
+        class: 'mb-12 mb-lg-32 business-zone-pricing-1__image'
+    } %}
+    <div class="business-zone-pricing-1__inner">
+        <div class="mb-08">{{ acf.available }}</div>
+        <div class="mb-08 heading-xl">{{ acf.heading }}</div>
+        <div class="mb-32">{{ acf.description }}</div>
+        <div class="mb-48 mb-lg-32 business-zone-pricing-1__items">
+            {% for acf in acf.items %}
+                <div class="business-zone-pricing-1__item">
+                    {{ svg(asset('icon/li-check-circle.svg'),'business-zone-pricing-1__item-icon') }}
+                    {{ acf.text }}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="mb-24 heading-xl business-zone-pricing-1__price">{{ acf.price }}</div>
+        <div class="mb-48 business-zone-pricing-1__monthly">{{ t.monthly|t }}</div>
+
+        <div class="mb-48 mb-lg-64">
+            {% include 'shared/button-solid/button-solid.twig' with {
+                btn: acf.link,
+                attr: 'data-js-scroll-to'
+            } %}
+        </div>
+
+        <div class="wysiwyg paragraph-sm">{{ acf.information }}</div>
+    </div>
+</div>

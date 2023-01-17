@@ -1,0 +1,9 @@
+<div class="security-faq">
+    <div class="container security-faq__container">
+        <div class="mb-32 mb-lg-64 text-align-center heading-xl">{{ acf.header }}</div>
+        {% include 'shared/@faq-accordion/faq-accordion.twig' with {
+            posts: faqPosts,
+            isDisableAnimate: true,
+        } %}
+    </div>
+</div>

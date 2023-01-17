@@ -1,0 +1,28 @@
+<div class="blog-post">
+
+    {% include 'shared/webp/webp.twig' with {
+        image: post.thumbnail,
+        class: 'mb-24 mb-lg-42 blog-post__image'
+    } %}
+
+    <time class="d-block mb-12 mb-lg-24 blog-post__time">{{ post.date }}</time>
+
+    <a class="d-block mb-24 mb-lg-16 heading-md blog-post__title" href="{{ post.link }}">{{ post.title }}</a>
+    <div class="mb-24 mb-lg-16 blog-post__excerpt">{{ post.post_excerpt|truncate(14) }}</div>
+
+    <div class="d-lg-none">
+        {% include 'shared/button-outlined/button-outlined.twig' with {
+            class: 'button-outlined--small',
+            url: post.link,
+            title: t.buttonReadMore|t
+        } %}
+    </div>
+
+    <div class="d-none d-lg-block">
+        {% include 'shared/link-border/link-border.twig' with {
+            url: post.link,
+            title: t.buttonReadMore|t
+        } %}
+    </div>
+
+</div>

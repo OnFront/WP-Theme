@@ -1,0 +1,23 @@
+<section class="search-bar">
+    <div class="container">
+        {% if post.meta('title') %}
+            <div class="heading-xl search-bar__header">
+                <h1 class="mb-48">{{ post.meta('title') }}</h1>
+            </div>
+        {% endif %}
+        <div class="search-bar__wrapper js-search-trigger" data-js-search-trigger>    
+            <img src="{{ asset('icon/layout/search-icon.svg') }}" class="search-bar__icon" role="presentation">
+            <input type="search" class="search-bar__input" name="search-courses" id="search-courses" placeholder="Wyszukaj" data-js-searchbar>
+
+            {% if acf.items %}
+                <div class="custom-options display-none" data-js-custom-options>
+                    <ul class="custom-options__list ">
+                        {% for acf in acf.items %}
+                            <li class="custom-options__item" id="item-{{loop.index}}" data-js-custom-options-item>{{ acf.title }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

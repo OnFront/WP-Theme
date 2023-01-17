@@ -1,0 +1,89 @@
+.course-modal {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    &__relative {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .5rem;
+        background-color: white;
+        border-radius: 6px;
+        width: 100%;
+        height: 80vh;
+       
+        &-inner {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__iframe {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__close {
+        position: absolute;
+        background-color: rgba(225, 225, 225, 0.1);
+        border-radius: 100%;
+        padding: 1rem;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+        transition: background-color .15s ease-out;
+        z-index: 9999;
+        transform: scale(0.8);
+
+        &:hover {
+            background-color: rgba(0, 173, 147, 0.3);
+            transition-duration: .25s; 
+        }
+
+        &--mobile {
+            display: block;
+        }
+
+        &--desktop {
+            display: none;
+        }
+    }
+
+    &.opened {
+        display: flex;
+        animation: transitionBackground 0.20s ease-out forwards;
+
+        .course-modal__relative {
+            animation: slideIn 0.12s ease-out forwards;
+        }
+    }
+
+    @include breakpoint-lg {
+        &__wrapper {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        &__close {
+            top: 2.5rem;
+            right: 2.5rem;
+            transform: scale(1);
+        }
+    }
+}

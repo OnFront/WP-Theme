@@ -1,0 +1,26 @@
+.customer-zone-icon {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  &__container {
+    display: grid;
+    grid-gap: 3rem;
+  }
+
+  &__heading {
+    color: $green-400;
+  }
+
+  @include breakpoint-lg {
+    padding-bottom: 2.5rem;
+
+    &__container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__icon {
+      height: 5rem;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{# @var merchant \App\Core\Post\MerchantPost #}
+{# @var branch \App\Core\Post\Merchant\Branch #}
+
+{% for branch in merchant.branches %}
+    <a class="promotion-card {{ class }}" data-wow-delay="{{ delay }}s" data-partner-id="{{ merchant.ID }}"
+       href="{{ branch.googleMapUrl }}"
+       data-term-id="{{ merchant.category.ID }}"
+       target="_blank"
+    >
+        <img class="promotion-card__logo" src="{{ merchant.logo ? Image(merchant.logo): asset('icon/layout/partner-placeholder.svg') }}" alt="">
+        <div>
+            <div class="mb-08 heading-sm">{{ merchant.title }}</div>
+
+            <div class="mb-08 promotion-card__address">{{ branch.address.street ~ ', ' ~ branch.address.city }}</div>
+
+            <div class="heading-sm promotion-card__discount">{{ merchant.promotion.title }}</div>
+        </div>
+    </a>
+{% endfor %}

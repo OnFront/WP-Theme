@@ -1,0 +1,23 @@
+<div class="pilot">
+    <div class="container pilot__container">
+        <div class="mb-48 mb-lg-64 heading-xl pilot__header">{{ acf.header }}</div>
+        <div class="pilot__body">
+            <img class="d-none d-lg-block pilot__quote" src="{{ asset('icon/pilot/quote.svg') }}" alt="">
+            <div>{{ acf.content }}</div>
+        </div>
+        <div class="pilot__items">
+            <div class="mb-48 mb-lg-24 pilot__images-wrapper">
+                {% for acf in acf.items %}
+                    <img class="pilot__image" src="{{ acf.image.url }}" alt="">
+                {% endfor %}
+            </div>
+            <div class="mb-12 mb-lg-04 heading-md">
+                {% for acf in acf.items %}
+                    {{ acf.name }}{{ loop.last ? "": ',' }}
+                {% endfor %}
+            </div>
+
+            <div>{{ acf.claim }}</div>
+        </div>
+    </div>
+</div>

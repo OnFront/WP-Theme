@@ -1,0 +1,9 @@
+.contact-emails {
+  text-align: center;
+  display: grid;
+  grid-gap: 3rem;
+
+  @include breakpoint-lg {
+    text-align: left;
+  }
+}

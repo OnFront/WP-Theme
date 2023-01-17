@@ -1,0 +1,7 @@
+.contact-for-media-about {
+  text-align: center;
+
+  @include breakpoint-lg {
+    text-align: left;
+  }
+}

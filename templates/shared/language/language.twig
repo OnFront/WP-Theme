@@ -1,0 +1,8 @@
+{% if translator.switch %}
+    <div class="language {{ class }}">
+        <div class="language__current">{{ translator.current }}&nbsp;/&nbsp;</div>
+        <ul class="language__list">
+            {{ translator.switch }}
+        </ul>
+    </div>
+{% endif %}

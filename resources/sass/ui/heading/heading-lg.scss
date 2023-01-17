@@ -1,0 +1,16 @@
+.heading-lg {
+  font-family: $font-family-point;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $navy-800;
+  line-height: 1.75rem;
+
+  span {
+    color: $green-400;
+  }
+
+  @include breakpoint-lg {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}

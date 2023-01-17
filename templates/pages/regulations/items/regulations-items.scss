@@ -1,0 +1,13 @@
+.regulations {
+  max-width: 48.75rem;
+  margin: 5rem auto;
+
+  &__header {
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    grid-gap: .75rem;
+  }
+}

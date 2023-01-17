@@ -1,0 +1,271 @@
+.question-page {
+  $block: '.question-page';
+
+  &__head {
+    display: grid;
+    grid-gap: 4rem;
+  }
+
+  &__heading {
+    margin-bottom: 2.4rem;
+    text-align: center;
+  }
+
+  &__description {
+    margin-bottom: 6.4rem;
+    text-align: center;
+  }
+
+  &__select-wrapper {
+    width: 100%;
+  }
+
+  &__select-label {
+    color: $color-primary;
+    opacity: .75;
+    margin-bottom: .4rem;
+  }
+
+  &__cards {
+    display: grid;
+    grid-gap: 7.4rem;
+    margin-bottom: 6.4rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__card-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__card-title {
+    max-width: 26rem;
+    margin-bottom: 2.4rem;
+  }
+
+  &__card-answer {
+    border-left: .2rem solid $color-grey;
+    padding-left: 2rem;
+    margin-bottom: 2.4rem;
+
+    a {
+      color: $color-secondary;
+      text-decoration: none;
+    }
+  }
+
+  &__card-tip {
+    font-size: 1.6rem;
+    color: $color-primary;
+    font-weight: 600;
+    margin-bottom: 1.8rem;
+  }
+
+  &__card-emoji {
+    font-size: 3.2rem;
+  }
+
+  &__card-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 20rem;
+    opacity: .25;
+    border: 1px solid $color-primary;
+    background-color: transparent;
+    color: $color-primary;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-family: $font-family-point;
+    padding: .5rem 2rem;
+    transition: border-color ease-in-out .333s, color ease-in-out .333s, opacity ease-in-out .333s;
+
+    &:hover {
+      opacity: 1;
+      color: $color-secondary;
+      border-color: $color-secondary;
+      cursor: pointer;
+
+      #{$block}__card-btn-icon {
+        fill: $color-secondary;
+      }
+    }
+
+    &--in-cookie {
+      opacity: 1;
+      color: $color-secondary;
+      border-color: $color-secondary;
+
+      &:hover {
+        cursor: not-allowed;
+      }
+
+      #{$block}__card-btn-icon {
+        fill: $color-secondary;
+      }
+    }
+  }
+
+  &__card-btn-icon {
+    margin-right: 1rem;
+    transition: fill ease-in-out .333s;
+  }
+
+  &__card-btn-number {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: -2.4rem;
+    font-size: 1.6rem;
+
+    &--active {
+      animation-name: like;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+    }
+  }
+
+  &__card-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__card-number {
+    margin-left: 3.2rem;
+    opacity: .25;
+
+    &--in-cookie {
+      color: $color-secondary;
+      opacity: 1;
+    }
+  }
+
+  &__see-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__search-section {
+    margin-bottom: 3.2rem;
+  }
+
+  &__search {
+    margin-bottom: 2.4rem;
+    width: 100%;
+  }
+
+  &__search .custom-select__trigger {
+    border-color: $color-secondary;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  &__form-section {
+    padding-top: 4.8rem;
+  }
+
+  &__form-heading {
+    text-align: center;
+  }
+
+  &__form-grid {
+    display: grid;
+  }
+
+  @include breakpoint-md {
+    &__search-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__select-wrapper {
+      max-width: 34rem;
+      margin-left: 2.4rem;
+    }
+
+    &__cards {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2.4rem 2rem;
+    }
+
+    &__card {
+      background: $color-white;
+      box-shadow: 0 0 21px -9px rgba(0, 0, 0, 0.5);
+      border-radius: .8rem;
+      padding: 4rem;
+    }
+
+    &__form-grid {
+      grid-template-columns: 48rem 1fr;
+      grid-gap: 12rem;
+    }
+
+    &__form-section {
+      padding-top: 6.8rem;
+    }
+
+    &__form-heading {
+      margin-bottom: 6.4rem;
+    }
+
+    &__search {
+      max-width: 34rem;
+    }
+  }
+
+  @include breakpoint-xl {
+    &__head {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    &__heading {
+      text-align: left;
+    }
+
+    &__search-section {
+      justify-content: flex-end;
+    }
+
+    &__description {
+      margin-bottom: 2.4rem;
+      text-align: left;
+    }
+
+    &__search {
+      margin-bottom: 0;
+    }
+
+    &__cards {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @keyframes like {
+    0% {
+      opacity: 0;
+      top: 100%;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      top: -25%;
+    }
+  }
+
+  .custom-select__icon-svg-wrapper {
+    border-radius: .8rem;
+    right: -2px;
+  }
+}

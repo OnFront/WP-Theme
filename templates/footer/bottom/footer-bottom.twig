@@ -1,0 +1,25 @@
+<div class="footer-bottom">
+
+    <div class="container d-xl-none">
+        {% include 'shared/badges/badges.twig' %}
+        <div class="mb-32 paragraph-sm text-align-center footer-bottom__company">{{ t.footerCompany|t }}</div>
+        <div class="mb-32 paragraph-sm text-align-center text-align-lg-left footer-bottom__mip">{{ t.footerMIP|t }}</div>
+        {% include 'footer/flags/footer-flags.twig' with {class: "mb-32 mb-lg-0 footer-bottom__flags"} %}
+    </div>
+
+    <div class="container d-none d-xl-block">
+        <div class="footer-bottom__desktop-card">
+            {% include 'shared/badges/badges.twig' %}
+            <div class="footer-bottom__mip-and-flags">
+                <div class="paragraph-sm text-align-center text-align-lg-left footer-bottom__mip">{{ t.footerMIP|t }}</div>
+                {% include 'footer/flags/footer-flags.twig' with {class: "mb-32 mb-lg-0 footer-bottom__flags"} %}
+            </div>
+        </div>
+        <div class="mb-32 paragraph-sm text-align-center footer-bottom__company">{{ t.footerCompany|t }}</div>
+    </div>
+
+    <div class="container">
+        <div class="paragraph-sm footer-bottom__copy">{{ t.footerCopyright|t }}</div>
+    </div>
+
+</div>

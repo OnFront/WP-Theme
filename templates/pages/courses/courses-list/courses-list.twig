@@ -1,0 +1,9 @@
+<section class="courses-list">
+    <div class="container">
+        <ul class="courses-list__list">
+            {% for acf in acf.items %}
+                {% include 'pages/courses/courses-list/courses-list-item.twig' %}
+            {% endfor %}
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    <div class="search-results">
+        <div class="container search-results__container">
+
+            <div class="text-align-center">
+                <div class="mb-24 heading-xl">{{ t.searchHeading|t }}</div>
+                <div class="mb-42 search-results__query">{{ t.searchFound|t }} {{ posts.found_posts }} {{ t.searchFoundPart2|t }} <b>“{{ searchQuery }}”</b></div>
+
+                <div class="mb-48 mb-lg-64 search-results__search-wrapper">
+                    {% include 'shared/form-search/form-search.twig' %}
+                </div>
+            </div>
+
+            {% include 'shared/blog-posts/blog-posts.twig' %}
+            {% include 'shared/blog-pagination/blog-pagination.twig' with {pagination: posts.pagination} %}
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+<div class="team-key">
+    <div class="mb-48 mb-lg-42 heading-xl">{{ acf.heading }}</div>
+
+    <div class="container team-key__body">
+        {% for acf in acf.items %}
+            {% if acf.isActive %}
+                <div class="team-key__card" data-js-team-key>
+                    <div class="mb-24 mb-lg-48 team-key__image-wrapper">
+                        {% include 'shared/webp/webp.twig' with {
+                            class: 'team-key__image'
+                        } %}
+                        <div class="team-key__linkedin-box">
+                            {{ svg(asset('icon/social/linkedin-square.svg'),'team-key__linkedin') }}
+                        </div>
+                        <a class="team-key__linkedin-overlay-link" href="{{ acf.linkedin }}" target="_blank"></a>
+                    </div>
+
+                    <div class="team-key__content">
+                        <div class="mb-12 heading-lg">{{ acf.name }}</div>
+                        <div class="mb-32 team-key__position">{{ acf.position }}</div>
+                        <div class="team-key__see-more">{{ t.buttonSeeMore|t }}</div>
+                    </div>
+
+                    <div class="team-key__back-card">
+                        <div class="mb-48 team-key__back-card-description">{{ acf.description }}</div>
+                        <div class="team-key__see-more" data-js-toggle>{{ t.buttonSeeLess|t }}</div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

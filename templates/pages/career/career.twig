@@ -1,0 +1,23 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    {% set intro = post.meta('intro') %}
+
+    <div class="career">
+        <div class="container">
+            <div class="career__body">
+                <div class="text-align-center text-align-lg-left">
+                    <div class="mb-32 heading-xl">{{ intro.header }}</div>
+                    <div class="mb-48 wysiwyg">{{ intro.content }}</div>
+
+                    {% include 'pages/career/job/career-job.twig' with {acf : post.meta('job_offer')} %}
+                </div>
+                {% include 'shared/webp/webp.twig' with {
+                    class: 'mb-48 mb-lg-0 w-100',
+                    image: intro.image
+                } %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

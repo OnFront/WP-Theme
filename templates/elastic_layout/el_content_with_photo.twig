@@ -1,0 +1,22 @@
+<div class="el-content-with-photo wow fadeIn" data-module="el-content-with-photo">
+
+    {% if acf.title %}
+        <h3>{{ acf.title }}</h3>
+    {% endif %}
+
+    {% set imageGroup = acf.contentImage %}
+    <div class="el-content-with-photo__body el-content-with-photo__body--{{ imageGroup.position }}">
+
+        <div class="el-content-with-photo__image-wrapper">
+            <img class="el-content-with-photo__image" src="{{ Image(imageGroup.image) }}" alt="">
+        </div>
+
+        <div class="el-content-with-photo__content">
+            {{ imageGroup.content }}
+        </div>
+
+    </div>
+
+    {{ acf.content }}
+
+</div>

@@ -1,0 +1,33 @@
+<div class="customer-zone-discount">
+    <div class="container customer-zone-discount__container">
+
+        <div class="customer-zone-discount__field">
+            <div class="mb-24">
+                {% include 'shared/webp/webp.twig' with {
+                    class: 'customer-zone-discount__image'
+                } %}
+            </div>
+            <div class="customer-zone-discount__content">
+                <h4 class="heading-xl mb-24">{{ acf.heading }}</h4>
+                <div>{{ acf.description }}</div>
+            </div>
+        </div>
+
+        <div class="customer-zone-discount__field-discounts">
+            <div class="mb-48 customer-zone-discount__items">
+                {% for id in acf.discounts %}
+                    {% include 'pages/customer-zone/discount/card/customer-zone-discount-card.twig' with {
+                        merchant: id|postMerchant
+                    } only %}
+                {% endfor %}
+            </div>
+            <div class="d-none d-lg-block">
+                {% include 'shared/link-border/link-border.twig' %}
+            </div>
+            <div class="d-lg-none">
+                {% include 'shared/button-solid/button-solid.twig' %}
+            </div>
+        </div>
+
+    </div>
+</div>

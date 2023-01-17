@@ -1,0 +1,25 @@
+html {
+  font-size: 1rem;
+  font-family: $font-family-point-soft;
+  font-weight: 400;
+}
+
+body {
+  color: $navy-600;
+  line-height: 1.5;
+
+  &.stop-scroll {
+    overflow: hidden
+  }
+}
+
+button {
+  font-family: $font-family-point;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}

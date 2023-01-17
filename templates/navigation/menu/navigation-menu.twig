@@ -1,0 +1,20 @@
+<ul class="navigation-menu">
+    {% for item in menuHeader.items %}
+        <li class="navigation-menu__item {{ item.classes|join(' ') }} {{ item.children ? 'navigation-menu__item--has-children' }}">
+            {% if item.children %}
+                <div class="navigation-menu__link">{{ item.title }}
+                    <div class="triangle triangle--down"></div>
+                </div>
+
+                <div class="navigation-menu__dropdown">
+                    {% include 'navigation/dropdown/navigation-dropdown.twig' %}
+                </div>
+            {% else %}
+                <a class="navigation-menu__link {{ item.current ? 'navigation-menu__link--current' }}"
+                   target="{{ item.target }}"
+                   href="{{ item.link }}">{{ item.title }}
+                </a>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

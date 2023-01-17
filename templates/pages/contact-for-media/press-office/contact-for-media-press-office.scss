@@ -1,0 +1,13 @@
+.contact-for-media-press-office {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  &__body {
+    display: grid;
+    grid-gap: .75rem;
+  }
+
+  @include breakpoint-lg {
+    text-align: left;
+  }
+}

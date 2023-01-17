@@ -1,0 +1,29 @@
+<div class="business-zone-gallery">
+    <div class="container mb-48 mb-lg-94 business-zone-gallery__container" data-js-eye-pos-gallery>
+        <a
+                href="{{ acf.imageBig.url }}"
+                data-pswp-width="{{ acf.imageBig.width }}"
+                data-pswp-height="{{ acf.imageBig.height }}"
+                data-cropped="true"
+        >
+            <img class="business-zone-gallery__image business-zone-gallery__image--big" src="{{ acf.imageBig.url }}" alt=""/>
+        </a>
+        <div class="business-zone-gallery__image-wrapper">
+            {% for image in acf.gallery %}
+                <a
+                        href="{{ image.url }}"
+                        data-pswp-width="{{ image.width }}"
+                        data-pswp-height="{{ image.height }}"
+                        target="_blank"
+                        data-cropped="true"
+                >
+                    <img class="business-zone-gallery__image" src="{{ image.url }}" alt=""/>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% include 'shared/@photoswipe/photoswipe.twig' with {
+    selector: '[data-js-eye-pos-gallery]'
+} %}

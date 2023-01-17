@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block navigation %}
+    <nav class="navigation" data-js-navigation>
+        {% include 'pages/front/navigation/front-navigation.twig' %}
+    </nav>
+{% endblock %}
+
+{% block container %}
+    <div data-js-front>
+        {% include 'pages/front/big6-banner-desktop/front-big6-banner-desktop.twig' with {acf: post.meta('big6_promo_banner_desktop') } %}
+        {% include 'pages/front/intro-desktop/front-intro-desktop.twig' with {acf : post.meta('intro')} %}
+        {% include 'pages/front/intro-mobile/front-intro-mobile.twig' with {acf : post.meta('intro')} %}
+    </div>
+
+    {% include 'shared/card-qr/card-qr.twig' with {acf: post.meta('modal')} %}
+{% endblock %}

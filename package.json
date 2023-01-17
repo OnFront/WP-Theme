@@ -1,0 +1,58 @@
+{
+  "name": "payeye",
+  "version": "1.0.0",
+  "main": "index.js",
+  "browserslist": [
+    "last 3 version",
+    "> 2%"
+  ],
+  "scripts": {
+    "start": "gulp --mode development",
+    "build": "gulp build --mode production"
+  },
+  "author": "Payeye",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "css-loader": "^3.5.3",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.0",
+    "merge-stream": "^2.0.0",
+    "node-sass": "^4.14.1",
+    "style-loader": "^2.0.0",
+    "webpack-stream": "^5.2.1",
+    "dotenv": "^16.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "intersection-observer": "^0.12.0",
+    "jquery": "^3.6.0",
+    "js-cookie": "^2.2.1",
+    "leaflet": "^1.7.1",
+    "leaflet.fullscreen": "^2.0.0",
+    "leaflet.gridlayer.googlemutant": "^0.12.1",
+    "leaflet.locatecontrol": "^0.73.0",
+    "leaflet.markercluster": "^1.5.0",
+    "leaflet.markercluster.freezable": "^1.0.0",
+    "photoswipe": "^5.2.7",
+    "sass-loader": "^8.0.2",
+    "screenfull": "^5.1.0",
+    "slick-carousel": "^1.8.1",
+    "ua-parser-js": "^1.0.2",
+    "webpack": "^4.46.0",
+    "wow.js": "^1.2.2"
+  }
+}

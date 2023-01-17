@@ -1,0 +1,81 @@
+.about-us-history {
+  text-align: center;
+
+  &__items {
+    display: grid;
+    grid-gap: 2rem;
+  }
+
+  &__item {
+    border: 1px solid $grey-200;
+    border-radius: .75rem;
+    padding: 1.5rem 1.125rem;
+  }
+
+  &__year {
+    color: $color-secondary;
+    margin-bottom: 3.25rem;
+  }
+
+  &__content {
+    ul {
+      list-style-position: inside;
+      list-style-type: none;
+      margin-left: 0;
+
+      li {
+        margin-bottom: 3rem;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          top: -1.5rem;
+          left: calc(50% - .5rem);
+          transform: translate(0, 0);
+          content: url('#{$icon-check-grey}');
+          z-index: 10;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @include breakpoint-lg {
+    padding-top: 3rem;
+    padding-bottom: 7rem;
+    text-align: left;
+
+    &__heading {
+      text-align: center;
+    }
+
+    &__items {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__item {
+      padding: 3rem 2.875rem;
+    }
+
+    &__year {
+      margin-bottom: 1.5rem;
+    }
+
+    &__content {
+      ul {
+        li {
+          margin-bottom: .75rem;
+          padding-left: 2.25rem;
+
+          &:before {
+            top: .2rem;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block container %}
+
+    {% cache cache.key %}
+
+        {% include 'pages/team/directors/team-directors.twig' with {acf : post.meta('directors')} %}
+        {% include 'pages/team/key/team-key.twig' with {acf : post.meta('team')} %}
+
+    {% endcache %}
+
+{% endblock %}

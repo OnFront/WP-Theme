@@ -1,0 +1,25 @@
+.button-outlined {
+  color: $green-400;
+  border-radius: 20rem;
+  border: 1px solid $green-400;
+  font-size: .875rem;
+  line-height: 1;
+  padding: 1rem 2rem;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color ease-in-out .4s, color ease-in-out .4s;
+  font-family: $font-family-point;
+  cursor: pointer;
+  background-color: $color-white;
+
+  &:hover {
+    color: $color-white;
+    background-color: $green-400;
+  }
+
+  &--small {
+    padding: .625rem 1.385rem;
+  }
+
+}

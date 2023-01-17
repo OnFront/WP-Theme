@@ -1,0 +1,19 @@
+<div class="contact-for-media-press-materials">
+    <h2 class="mb-36 heading-xl">{{ acf.heading }}</h2>
+
+    <div class="contact-for-media-press-materials__body">
+        {% include 'shared/button-icon/button-icon.twig' with {
+            btn : {
+                title : acf.file.name,
+                url: acf.file.link,
+            },
+            icon: asset('shared/download.svg')
+        } %}
+
+        {% include 'shared/button-icon/button-icon.twig' with {
+            btn: acf.link,
+            icon: asset('shared/arrow-right.svg')
+        } %}
+    </div>
+
+</div>

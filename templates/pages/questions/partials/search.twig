@@ -1,0 +1,13 @@
+<div class="question-page__search">
+
+    <div class="question-page__select-label">{{ t.questionSearch|t }}</div>
+
+    <select data-js-search>
+        <option value="">{{ t.questionSearchQuestion|t }}</option>
+
+        {% for post in questions %}
+            <option value="{{ post.ID }}">{{ post.title }}</option>
+        {% endfor %}
+
+    </select>
+</div>

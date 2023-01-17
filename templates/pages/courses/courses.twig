@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+
+{% block container %}
+
+    <div class="courses" data-js-courses>
+        {% if not post.password_required %}
+            {{ passwordForm }}
+        {% else %}
+            {% include 'pages/courses/search-bar/search-bar.twig' with {acf: post.meta('list')} %} 
+            {% include 'pages/courses/courses-list/courses-list.twig' with {acf: post.meta('list')} %}
+            {% include 'pages/courses/modal/modal.twig' %}
+        {% endif %}
+    </div>
+
+{% endblock %}

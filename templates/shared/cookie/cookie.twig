@@ -1,0 +1,76 @@
+<div class="cookies-wrapper" data-js-cookie>
+
+    <div class="cookies">
+        <div class="container">
+            <div class="cookies__body">
+                <div class="text-align-center text-align-lg-left wysiwyg cookies__content">{{ store.theme.cookie.content }}</div>
+                <div class="cookies__btn-wrapper">
+                    <button class="cookies__btn-link" data-btn-reject>{{ t.cookieModalRejectAll|t }}</button>
+                    <button class="cookies__btn-link" data-btn-preference>{{ t.cookieManager|t }}</button>
+                    <button class="button-outlined" data-btn-accept>{{ t.cookieButton|t }}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" data-js-cookie-modal>
+        <div class="modal__dialog">
+            <div class="modal__content cookies-modal">
+
+                <div class="mb-20 heading-md cookies-modal__header">{{ t.cookieModalHeader|t }}</div>
+
+                <div class="mb-48 mb-lg-64 cookies-modal__body">
+
+                    <div class="mb-24 wysiwyg">{{ store.theme.cookie.modalContent }}</div>
+
+                    <button class="mb-32 button-outlined button-outlined--small" data-js-accept-all>{{ t.cookieModalAcceptAll|t }}</button>
+
+                    <div class="mb-16 heading-md">{{ t.cookieModalHeaderPreference|t }}</div>
+
+                    <div>
+                        <div class="mb-16 cookies-modal__preference">
+
+                            <div>{{ t.cookieModalAnalyticsCookie|t }}</div>
+                            <div class="text-align-right">
+                                {% include 'shared/switch/switch.twig' with {
+                                    attr: 'data-js-analytics-value'
+                                } %}
+                            </div>
+
+                        </div>
+                        <div class="mb-24 paragraph-sm cookies-modal__text">{{ t.cookieAnalytical|t }}</div>
+                    </div>
+
+                    <div>
+                        <div class="mb-16 cookies-modal__preference">
+
+                            <div>{{ t.cookieModalAdsCookie|t }}</div>
+                            <div class="text-align-right">
+                                {% include 'shared/switch/switch.twig' with {
+                                    attr: 'data-js-ads-value'
+                                } %}
+                            </div>
+
+                        </div>
+                        <div class="mb-24 paragraph-sm cookies-modal__text">{{ t.cookieAds|t }}</div>
+                    </div>
+
+                    <div>
+                        <div class="mb-16 cookies-modal__preference">
+                            <div>{{ t.cookieModalRequiredCookie|t }}</div>
+                            <div class="text-align-right">{{ t.cookieModalAlwaysOn|t }}</div>
+                        </div>
+                        <div class="mb-24 paragraph-sm cookies-modal__text">{{ t.cookieNecessary|t }}</div>
+                    </div>
+
+                </div>
+
+                <div class="text-align-right">
+                    <button class="button-outlined" data-js-close-modal>{{ t.cookieModalSave|t }}</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

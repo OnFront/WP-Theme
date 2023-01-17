@@ -1,0 +1,15 @@
+<div class="about-us-awards">
+    <div class="container">
+        <div class="mb-48 mb-lg-64 heading-xl">{{ acf.heading }}</div>
+        <div class="about-us-awards__grid">
+            {% for acf in acf.items %}
+                <div class="about-us-awards__item">
+                    {% include 'shared/webp/webp.twig' with {
+                        class: 'about-us-awards__logo'
+                    } %}
+                    {{ acf.heading }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

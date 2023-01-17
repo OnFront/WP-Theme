@@ -1,0 +1,50 @@
+.button-solid {
+  color: $color-white;
+  border-radius: 20rem;
+  border: 1px solid $green-400;
+  font-size: .875rem;
+  line-height: 1;
+  padding: 1rem 2rem;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color ease-in-out .4s;
+  font-family: $font-family-point;
+  background-color: $green-400;
+  cursor: pointer;
+
+  &:hover:not(.button-solid--disabled) {
+    background-color: $green-500;
+  }
+
+  &--small {
+    padding: .625rem 1.5rem;
+  }
+
+
+  &--gradient {
+
+    @include breakpoint-lg{
+        background: linear-gradient(90deg, #51AAB1 0%, #1F335E 100%);
+        padding: 0 0.75rem;
+        border-radius: 20px;
+
+        .navigation-menu__link  {
+            display: flex;
+            justify-content: center;
+            padding: 0.25rem 1.5rem;
+            color: white;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.75rem;
+        }
+    }
+  }
+
+  &--disabled {
+    background-color: $grey-300;
+    border-color: $grey-300;
+    cursor: not-allowed;
+  }
+
+
+}

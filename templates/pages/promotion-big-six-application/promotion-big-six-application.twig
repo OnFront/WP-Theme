@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block topBar %}{% endblock %}
+{% block navigation %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block container %}
+    <div data-js-promotion-big-six-application>
+        {% include 'pages/promotion-big-six-application/banner/banner.twig' with { acf: post.meta('banner')} %}
+        {% include 'pages/promotion-big-six-application/promo/promo.twig' with { acf: post.meta('promotion')} %}
+    </div>
+{% endblock %}

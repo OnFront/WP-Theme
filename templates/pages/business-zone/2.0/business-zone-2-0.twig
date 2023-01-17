@@ -1,0 +1,24 @@
+<div class="business-zone-2-0" data-js-eye-pos-2-0>
+    <div class="business-zone-2-0__pos" data-js-pos-section>
+        {% include 'shared/webp/webp.twig' with {
+            class: 'business-zone-2-0__pos-image',
+            imgAttr: 'data-js-pos',
+            classPicture: 'business-zone-2-0__pos-picture'
+        } %}
+        <div class="business-zone-2-0__content" data-js-content>
+            <div class="mb-24 heading-xl">{{ acf.heading }}</div>
+            <div class="mb-24 business-zone-2-0__description">{{ acf.description }}</div>
+            <div class="business-zone-2-0__content-items">
+                {% for acf in acf.items %}
+                    <div class="business-zone-2-0__content-item">
+                        {{ svg(asset('icon/li-check-circle.svg'),'business-zone-2-0__content-icon') }}
+                        <div>
+                            <div class="mb-08 heading-lg">{{ acf.heading }}</div>
+                            <div>{{ acf.description }}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

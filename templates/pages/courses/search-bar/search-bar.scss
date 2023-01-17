@@ -1,0 +1,45 @@
+.search-bar {
+    padding: 3.75rem 0 4.625rem 0;
+    text-align: center;
+    margin: 0 auto;
+    background-color: $color-grey-light;
+
+    .container {
+        max-width: 48.75rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        padding: 0.75rem 1rem 0.75rem 3rem;
+        background: white;
+        border: 1px solid $grey-200;
+        border-radius: 6px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 0;
+        color: $navy-800;
+        font-size: 1rem;
+        border: none;
+        font-family: $font-family-point;
+        text-align: start;
+
+        &::placeholder {
+            color: $grey-300;
+            font-size: 1rem;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: .75rem;
+        left: 1rem;
+    }
+
+    .highlight {
+        color: $navy-800;
+    }
+}

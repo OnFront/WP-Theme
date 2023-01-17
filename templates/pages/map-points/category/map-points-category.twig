@@ -1,0 +1,28 @@
+<div class="map-points-category" data-js-map-point-category>
+
+    <div class="map-points-category__head">
+        {{ svg(asset('map-points/location.svg')) }}
+        {{ svg(asset('shared/close.svg'),'map-points-category__close','data-js-close-category') }}
+        <div class="heading-xs map-points-category__heading">{{ t.mapPointsLocation|t }}</div>
+    </div>
+
+    <div class="mb-32 map-points-category__items">
+        {% for term in partnersTerms %}
+            {% include 'shared/input-chekbox/input-checkbox.twig' with {
+                name: 'category',
+                value: term.ID,
+                title: term.meta('title')[translator.current] ?? term.name,
+                class: 'map-points-category__checkbox',
+                classTitle: 'map-points-category__title',
+            } %}
+        {% endfor %}
+    </div>
+
+    <div class="map-points-category__btn-wrapper">
+        {% include 'shared/button-solid/button-solid.twig' with {
+            title: t.applyFilters|t,
+            attr: 'data-js-close-category'
+        } %}
+    </div>
+
+</div>

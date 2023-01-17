@@ -1,0 +1,16 @@
+<div class="pilot-awards">
+    <div class="container">
+        <div class="mb-48 mb-lg-70 heading-xl pilot-awards__header">{{ acf.header }}</div>
+        <div class="pilot-awards__items">
+            {% for acf in acf.items %}
+                <div class="pilot-awards__item">
+                    <div class="pilot-awards__logo-wrapper">
+                        <img class="pilot-awards__logo" src="" data-src="{{ acf.image.url }}" alt="">
+                    </div>
+                    <div class="mb-12 heading-md pilot-awards__title">{{ acf.title }}</div>
+                    <div class="pilot-awards__description">{{ acf.description }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

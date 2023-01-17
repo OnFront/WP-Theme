@@ -1,0 +1,16 @@
+<ul class="navigation-mobile-menu">
+    {% for item in menuHeader.items %}
+        <li class="navigation-mobile-menu__item {{ item.classes|join(' ') }}" {{ item.children ? 'data-accordion="menu-mobile-' ~ loop.index ~ '"' }}>
+            <a class="navigation-mobile-menu__link"
+                    {{ item.children ? 'data-accordion-header' }}
+               target="{{ item.target }}"
+               href="{{ item.link }}">{{ item.title }} {{ item.children ? '<span class="triangle triangle--down navigation-mobile-menu__triangle"></span>' }}</a>
+
+            {% if item.children %}
+                <div {{ item.children ? 'data-accordion-body' }}>
+                    {% include 'navigation/mobile-dropdown/navigation-mobile-dropdown.twig' %}
+                </div>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

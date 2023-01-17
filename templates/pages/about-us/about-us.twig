@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    {% include 'pages/about-us/payeye/about-us-payeye.twig' with {acf : post.meta('about_us')} %}
+    {% include 'pages/about-us/biometric/about-us-biometric.twig' with {acf : post.meta('biometric')} %}
+    {% include 'pages/about-us/icon-payeye/about-us-icon-payeye.twig' with {acf : post.meta('icon_payeye')} %}
+    {% include 'pages/about-us/expectations/about-us-expectations.twig' with {acf : post.meta('expectations')} %}
+    {% include 'pages/about-us/history/about-us-history.twig' with {acf : post.meta('history')} %}
+    {% include 'pages/about-us/security/about-us-security.twig' with {acf : post.meta('security')} %}
+    {% include 'pages/about-us/icon-biometric/about-us-icon-biometric.twig' with {acf : post.meta('icons_biometric')} %}
+    {% include 'pages/about-us/awards/about-us-awards.twig' with {acf : post.meta('awards')} %}
+{% endblock %}

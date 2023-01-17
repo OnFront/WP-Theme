@@ -1,0 +1,35 @@
+{% if acf.type == 'email' %}
+
+    {% set href = 'mailto:' ~ acf.contact %}
+
+{% elseif acf.type == 'phone' %}
+
+    {% set href = 'tel:' ~ acf.contact %}
+
+{% else %}
+
+    {% set href = 'tel:' ~ acf.contact %}
+
+{% endif %}
+
+<div class="contact-data">
+    <a class="contact-data__link" href="{{ href }}">
+        {% if acf.type == 'email' %}
+
+            {% set href = 'mailto:' ~ acf.contact %}
+            {{ svg(asset('shared/email.svg'),'contact-data__icon') }}
+
+        {% elseif acf.type == 'phone' %}
+
+            {{ svg(asset('shared/phone.svg'),'contact-data__icon') }}
+            {% set href = 'tel:' ~ acf.contact %}
+
+        {% else %}
+
+            {{ svg(asset('shared/stationary.svg'),'contact-data__icon') }}
+            {% set href = 'tel:' ~ acf.contact %}
+
+        {% endif %}
+        <span>{{ acf.contact }}</span>
+    </a>
+</div>

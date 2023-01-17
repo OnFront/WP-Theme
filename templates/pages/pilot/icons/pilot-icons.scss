@@ -1,0 +1,61 @@
+.pilot-icons {
+  &__header {
+    max-width: 48.625rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  &__items {
+    display: grid;
+    grid-gap: 3.4rem;
+    text-align: center;
+  }
+
+  &__item {
+    display: grid;
+    grid-gap: 1.5rem;
+  }
+
+  &__title {
+    color: $color-secondary;
+    margin-bottom: 1.2rem;
+  }
+
+  &__icon-wrapper {
+    width: 6.25rem;
+    height: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $green-100;
+    border-radius: .75rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  @include breakpoint-lg {
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+
+    &__header {
+      margin-bottom: 5.5rem;
+    }
+
+    &__items {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 4rem 3rem;
+      text-align: left;
+    }
+
+    &__item {
+      grid-template-columns: auto 1fr;
+      grid-gap: 3rem;
+    }
+  }
+}

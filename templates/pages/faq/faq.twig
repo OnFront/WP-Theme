@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block container %}
+
+    <div class="faq" data-js-faq>
+
+        <div class="mb-48 faq__head">
+            <div class="container faq__container">
+                <div class="mb-24 mb-lg-48 heading-xl">{{ post.meta('intro').header }}</div>
+                <div class="mb-16">
+                    <select name="selectFaq">
+                        <option value="">{{ t.faqSearchQuestion|t }}</option>
+
+                        {% for post in faqs %}
+                            <option value="{{ post.ID }}">{{ post.title }}</option>
+                        {% endfor %}
+
+                    </select>
+                </div>
+                {{ post.meta('intro').description }}
+            </div>
+        </div>
+
+        <div class="container faq__container">
+            {% include 'shared/@faq-accordion/faq-accordion.twig' with {
+                posts: faqs,
+                isDisableAnimate: true,
+            } %}
+        </div>
+    </div>
+
+{% endblock %}

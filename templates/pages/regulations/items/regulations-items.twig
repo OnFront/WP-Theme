@@ -1,0 +1,17 @@
+{% if acf.items %}
+    <div class="regulations">
+
+        <h1 class="mb-36 mb-lg-70 heading-xl regulations__header">{{ acf.header }}</h1>
+
+        <div class="regulations__grid">
+            {% for acf in acf.items %}
+                {% include 'shared/button-icon/button-icon.twig' with {
+                    btn : acf.link,
+                    icon: asset('shared/download.svg'),
+                    class: 'regulations__btn',
+                } %}
+            {% endfor %}
+        </div>
+
+    </div>
+{% endif %}

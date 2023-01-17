@@ -1,0 +1,47 @@
+.business-zone-eye-pos {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+  background-color: $green-100;
+
+  &__container {
+    display: grid;
+    grid-gap: .75rem;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__items {
+    display: grid;
+    grid-gap: 1.125rem;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 1.5rem;
+    text-align: left;
+    align-items: center;
+  }
+
+  @include breakpoint-lg {
+    text-align: left;
+
+    &__container {
+      grid-template-columns: auto 1fr;
+      grid-gap: 3rem;
+    }
+
+    &__items {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1.125rem 2rem;
+    }
+
+    &__item {
+      color: $navy-800;
+    }
+  }
+}

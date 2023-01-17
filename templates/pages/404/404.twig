@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    <div class="page-404">
+        <div class="container">
+            <div class="text-align-center">
+                <div class="mb-32">
+                    {{ svg(asset('icon/404/loupe.svg')) }}
+                </div>
+
+                <div class="mb-32 heading-lg">{{ t.page404Header|t }}</div>
+
+                <p class="mb-32">{{ t.page404Text|t }}</p>
+
+                {% include 'shared/button-solid/button-solid.twig' with {
+                    title: t.page404Btn|t,
+                    url: store.frontPageUrl
+                } %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

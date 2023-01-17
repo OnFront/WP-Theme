@@ -1,0 +1,84 @@
+global:
+  sql_adapter: wpcli
+
+local:
+  vhost: http://payeye2.0.local
+  wordpress_path: /Users/payeye/Sites/payeye2.0/public_html
+
+  database:
+    name: payeye2.0
+    user: root
+    password: '1234'
+    host: localhost
+
+uat:
+  vhost: https://uatpayeye.wpengine.com
+  wordpress_path: sites/uatpayeye
+
+  database:
+    name: wp_uatpayeye
+    user: uatpayeye
+
+  exclude:
+    - '.idea'
+    - 'README.md'
+    - '*.map'
+    - 'composer.json'
+    - 'composer.lock'
+    - 'gulpfile.js'
+    - 'package-lock.json'
+    - 'package.json'
+    - '.git/'
+    - '.gitignore'
+    - '.gitmodules'
+    - 'node_modules/'
+    - 'resources/'
+    - 'bin/'
+    - 'tmp/*'
+    - 'Gemfile*'
+    - 'Movefile'
+    - 'movefile'
+    - 'movefile.yml'
+    - 'movefile.yaml'
+    - 'wp-config.php'
+    - 'wp-content/*.sql.gz'
+    - '*.orig'
+    - '.DS_Store'
+    - '.htaccess'
+    - '.htpasswd'
+    - 'webpack.config.js'
+    - 'README.md'
+    - 'twentytwentyone'
+    - 'twentytwenty'
+    - 'twentynineteen'
+    - 'payeye2.0/cache/twig'
+
+  ssh:
+    host: uatpayeye.ssh.wpengine.net
+    user: uatpayeye
+
+  hooks:
+    push:
+      before:
+        - command: cd wp-content/themes/payeye2.0; composer dump --no-dev --classmap-authoritative
+          where: local
+        - command: cd wp-content/themes/payeye2.0; yarn build
+          where: local
+      after:
+        - command: 'rm -rf /home/wpe-user/sites/uatpayeye/wp-content/themes/payeye2.0/cache/twig'
+          where: remote
+        - command: wp wp-rest-cache flush
+          where: remote
+        - command: cd wp-content/themes/payeye2.0; composer dump
+          where: local
+
+  forbid:
+    push:
+      db: true
+      plugins: true
+      languages: true
+      uploads: true
+      mu-plugins: true
+
+    pull:
+      themes: true

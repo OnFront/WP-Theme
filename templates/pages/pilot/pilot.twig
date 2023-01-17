@@ -1,0 +1,7 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    {% for acf in post.meta('layout') %}
+        {% include 'pages/pilot/' ~ acf.acf_fc_layout ~ '/pilot-'  ~ acf.acf_fc_layout ~ '.twig' with {acf: acf} only %}
+    {% endfor %}
+{% endblock %}

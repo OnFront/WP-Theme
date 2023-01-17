@@ -1,0 +1,11 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    {% include 'pages/customer-zone/intro/customer-zone-intro.twig' with {acf : post.meta('intro')} %}
+    {% include 'pages/customer-zone/video/customer-zone-video.twig' with {acf : post.meta('video')} %}
+    {% include 'pages/customer-zone/icon/customer-zone-icon.twig' with {acf : post.meta('icon')} %}
+    {% include 'pages/customer-zone/application/customer-zone-application.twig' with {acf : post.meta('application')} %}
+    {% include 'pages/customer-zone/discount/customer-zone-discount.twig' with {acf : post.meta('discount')} %}
+    {% include 'pages/customer-zone/map/customer-zone-map.twig' with {acf : post.meta('map')} %}
+    {% include 'pages/customer-zone/fusion-of-biometrics/customer-zone-fusion-of-biometrics.twig' with {acf : post.meta('fusion_of_biometrics')} %}
+{% endblock %}

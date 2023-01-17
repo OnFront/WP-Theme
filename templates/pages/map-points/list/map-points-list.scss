@@ -1,0 +1,45 @@
+.map-points-list {
+  overflow: auto;
+  height: 100%;
+  max-height: 13.5rem;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &__card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 1.5rem;
+    border-bottom: 1px solid $color-grey;
+    padding: 1.125rem 1.5rem;
+    transition: background-color ease-in-out .4s;
+    cursor: pointer;
+    align-items: center;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      background-color: $green-100;
+    }
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  @media (min-height: 720px) {
+    max-height: 18rem;
+  }
+
+  @media (min-height: 820px) {
+    max-height: 22.5rem;
+  }
+
+  @media (min-height: 920px) {
+    max-height: 32rem;
+  }
+}

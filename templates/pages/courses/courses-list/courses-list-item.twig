@@ -1,0 +1,16 @@
+<article class="courses-list-item" id="item-{{loop.index}}" data-js-courses-list-item>
+    <div class="courses-list-item__image">
+        <a href="" data-js-link="https://www.youtube.com/embed/{{ acf.youtube }}"><img src="{{ Image(acf.placeholder).src }}"></a>
+    </div>
+
+    <header class="courses-list-item__header">
+        <h2><span class="courses-list-item__prefix">#{{ loop.index }}</span> <span class="courses-list-item-innerTitle">{{ acf.title }}</span></h2>
+    </header>
+
+    <p>{{ acf.desc }}</p>
+
+    <button class="courses-list-item__cta" data-js-link="https://www.youtube.com/embed/{{ acf.youtube }}">
+         Przejdź do wideo
+        <img src="{{ asset('icon/layout/arrow-right.svg')}}" role="presentation">
+    </button>
+</article>

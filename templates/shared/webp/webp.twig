@@ -1,0 +1,15 @@
+{% set image = Image(image ?? acf.image) %}
+
+<picture class="{{ classPicture }}" {{ attr }}>
+    <source type="image/webp" srcset="{{ image.src|towebp }}?v={{ cacheVersion }} 2x">
+
+    <img
+            src="{{ image.src }}?v={{ cacheVersion }}"
+            srcset="{{ image.src }}?v={{ cacheVersion }} 2x"
+            alt="{{ image.alt }}"
+            class="{{ class }}"
+            {{ imgAttr }}
+    >
+
+    <noscript><img src="{{ image.src }}" alt="{{ image.alt }}"></noscript>
+</picture>

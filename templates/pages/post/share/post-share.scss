@@ -1,0 +1,44 @@
+.share-post {
+  text-align: center;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__social-media {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__link {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-left: 1rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__icon {
+    fill: $navy-600;
+    transition: opacity ease-in-out .333s;
+  }
+
+  @include breakpoint-lg {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__link {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+  }
+}

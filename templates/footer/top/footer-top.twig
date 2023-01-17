@@ -1,0 +1,20 @@
+<div class="footer-top">
+    <div class="container">
+        <div class="footer-top__body wow fadeIn">
+
+            <div class="footer-top__card footer-top__card--social">
+                <img class="footer-top__logo" src="" data-src="{{ asset('icon/logo.svg') }}" alt="PayEye - logo" width="202" height="35px">
+                {% include 'footer/social/social-media.twig' %}
+            </div>
+
+            <div class="footer-top__card footer-top__card--menu">
+                {% include 'footer/menu/footer-menu.twig' with {menu : footerMenuOne} only %}
+                {% include 'footer/menu/footer-menu.twig' with {menu : footerMenuTwo} only %}
+                {% include 'footer/menu/footer-menu.twig' with {menu : footerMenuThree} only %}
+                {% include 'footer/menu/footer-menu.twig' with {menu : footerMenuFour} only %}
+                {% include 'footer/menu/footer-menu.twig' with {menu : footerMenuFive} only %}
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.DS_Store
+
+.idea
+cache
+vendor
+node_modules
+
+composer.lock
+package-lock.json
+
+public/css
+public/js
+public/photoswipe
+public/payeye.mp4
+
+.env

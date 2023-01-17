@@ -1,0 +1,81 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    <div class="question-page" data-js-questions>
+
+        <div class="container">
+
+            <div class="question-page__head">
+                {% include 'components/bundle/bundle_image.twig' with {
+                    image: post.meta('intro').image,
+                } %}
+                <div>
+                    <div class="heading-large question-page__heading wow fadeIn">{{ post.meta('intro').header }}</div>
+                    <div class="question-page__description wow fadeIn" data-wow-delay=".3s">{{ post.meta('intro').description }}</div>
+                </div>
+            </div>
+
+            <div class="question-page__search-section">
+                {% include 'questions/partials/search.twig' %}
+
+                <div class="question-page__select-wrapper">
+                    <div class="question-page__select-label">{{ t.questionSortBy|t }}</div>
+                    <select data-js-sort>
+                        <option value="DESC">{{ t.questionSortDESC|t }}</option>
+                        <option value="ASC">{{ t.questionSortASC|t }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="question-page__cards" data-js-body>
+                {% for post in questions %}
+                    <div class="question-page__card" data-js-like data-id="{{ post.ID }}" {{ loop.index > 9 ? 'style="display:none;"' }}>
+                        <div>
+                            <div class="question-page__card-head">
+                                <div class="heading-small question-page__card-title">{{ post.title }}</div>
+                                <div class="question-page__card-emoji">{{ post.meta('emoji') }}</div>
+                            </div>
+                            <div class="question-page__card-answer">{{ post.post_content }}</div>
+                        </div>
+
+                        <div>
+                            <div class="question-page__card-tip">{{ t.questionCard|t }}</div>
+                            <div class="question-page__card-bottom">
+                                <button class="question-page__card-btn" data-post-id="{{ post.ID }}">
+                                    {{ svg(asset('icon/question/like.svg'),'question-page__card-btn-icon') }}
+                                    {{ t.questionCardButton|t }}
+                                    <span class="question-page__card-btn-number" data-js-number>+1</span>
+                                </button>
+                                <div class="question-page__card-number" data-js-count>{{ post.meta('like') }}</div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="question-page__see-more">
+                {% include 'components/layout/button/btn_outlined.twig' with {
+                    btn: {
+                        url: '#',
+                        title: t.buttonSeeMore|t,
+                    },
+                    attr: 'data-js-more'
+                } %}
+            </div>
+
+            <div class="question-page__form-section">
+                <div class="heading-large question-page__form-heading">{{ post.meta('form').heading }}</div>
+
+                <div class="question-page__form-grid">
+                    {% include 'components/bundle/bundle_image.twig' with {
+                        image: post.meta('form').image
+                    } %}
+                    <div>
+                        {{ function('do_shortcode', post.meta('form').form) }}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

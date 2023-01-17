@@ -1,0 +1,55 @@
+.footer-top {
+  margin-bottom: 2rem;
+
+  &__body {
+    display: grid;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid $grey-200;
+  }
+
+  &__card {
+    &--social {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid $grey-200;
+      margin-bottom: 2rem;
+    }
+
+    &--menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__logo {
+    width: 8.75rem;
+  }
+
+  @include breakpoint-lg {
+
+    &__body {
+      grid-template-columns: 3fr 9fr;
+      grid-gap: 1rem;
+    }
+
+    &__card {
+
+      &--social {
+        display: block;
+        border-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      &--menu {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+
+    &__logo {
+      margin-bottom: 3rem;
+      width: 12.5rem;
+    }
+  }
+}

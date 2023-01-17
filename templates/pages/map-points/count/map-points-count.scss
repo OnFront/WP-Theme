@@ -1,0 +1,14 @@
+.map-points-count {
+  background-color: $green-100;
+  font-size: .875rem;
+  color: $navy-800;
+  padding: 1rem 1.5rem;
+  display: none;
+  cursor: pointer;
+
+  &__count {
+    display: inline-block;
+    margin-left: 2px;
+    color: $green-400;
+  }
+}

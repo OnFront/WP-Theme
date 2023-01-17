@@ -1,0 +1,19 @@
+<div class="business-zone-eye-pos">
+    <div class="container business-zone-eye-pos__container">
+        {% include 'shared/webp/webp.twig' with {
+            class: 'business-zone-eye-pos__image'
+        } %}
+        <div>
+            <div class="mb-24 heading-xl">{{ acf.heading }}</div>
+            <div class="mb-36 business-zone-eye-pos__description">{{ acf.description }}</div>
+            <div class="business-zone-eye-pos__items">
+                {% for acf in acf.items %}
+                    <div class="business-zone-eye-pos__item">
+                        <img src="{{ acf.image.url }}" alt="">
+                        <div class="">{{ acf.description }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

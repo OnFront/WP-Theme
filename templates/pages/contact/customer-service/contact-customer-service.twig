@@ -1,0 +1,13 @@
+<div class="contact-customer-service wow fadeIn">
+
+    <div class="mb-16 heading-lg">{{ acf.header }}</div>
+
+    <div class="mb-16">{{ acf.content }}</div>
+
+    <div class="contact-customer-service__items">
+        {% for acf in acf.items %}
+            {% include 'shared/contact-data/contact-data.twig' %}
+        {% endfor %}
+    </div>
+
+</div>

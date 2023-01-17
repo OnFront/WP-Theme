@@ -1,0 +1,83 @@
+.blog-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  &__pages {
+    margin-left: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__number-wrapper {
+    margin-left: .3rem;
+    margin-right: .3rem;
+    background-color: $green-100;
+    border-radius: 4px;
+
+    &:first-child {
+      margin-left: 1rem;
+    }
+
+    &:last-child {
+      margin-right: 1rem;
+    }
+  }
+
+  &__number {
+    display: flex;
+    flex-wrap: wrap;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    color: $green-400;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    transition: all ease-in-out .4s;
+    border-radius: 4px;
+    cursor: pointer;
+
+
+    &--current,
+    &:hover {
+      color: $color-white;
+      background-color: $green-400;
+    }
+  }
+
+  &__arrow {
+    transition: all ease-in-out .4s;
+    border-color: $green-400;
+  }
+
+  .prev,
+  .next {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $green-100;
+    border-radius: .25rem;
+    transition: all ease-in-out .333s;
+    cursor: pointer;
+
+    &:hover .arrow {
+      border-color: $color-primary;
+    }
+  }
+
+  .prev .arrow {
+    position: relative;
+    left: 2px;
+  }
+
+  .next .arrow {
+    position: relative;
+    right: 2px;
+  }
+}

@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    {% include 'pages/business-zone/intro/business-zone-intro.twig' with {acf : post.meta('intro')} %}
+    {% include 'pages/business-zone/video/business-zone-video.twig' with {acf : post.meta('video')} %}
+    {% include 'pages/business-zone/benefits/business-zone-benefits.twig' with {acf : post.meta('benefits')} %}
+    {% include 'pages/business-zone/2.0/business-zone-2-0.twig' with {acf: post.meta('eyePOS')} %}
+    {% include 'pages/business-zone/gallery/business-zone-gallery.twig' with {acf : post.meta('gallery')} %}
+    {% include 'pages/business-zone/eye-pos/business-zone-eye-pos.twig' with {acf : post.meta('eye_pos')} %}
+    {% include 'pages/business-zone/fusion-of-biometrics/business-zone-fusion-of-biometrics.twig' with {acf : post.meta('fusion_of_biometrics')} %}
+    {% include 'pages/business-zone/eye-pos-color/business-zone-eye-pos-color.twig' with {acf : post.meta('eye_pos_color')} %}
+    {% include 'pages/business-zone/pricing/business-zone-pricing.twig' with {acf : post.meta('pricing')} %}
+    {% include 'shared/form-order/form-order.twig' with {acf: post.meta('form') } %}
+    {% include 'pages/business-zone/products/business-zone-products.twig' with {acf : post.meta('products')} %}
+{% endblock %}

@@ -1,0 +1,10 @@
+<div class="business-zone-pricing">
+    <div class="container">
+        <div class="mb-24 heading-xl">{{ acf.heading }}</div>
+        <div class="business-zone-pricing__description">{{ acf.description }}</div>
+        <div class="business-zone-pricing__grid">
+            {% include 'pages/business-zone/pricing/1/business-zone-pricing-1.twig' with {acf: acf['1']} %}
+            {% include 'pages/business-zone/pricing/2/business-zone-pricing-2.twig' with {acf: acf['2']} %}
+        </div>
+    </div>
+</div>

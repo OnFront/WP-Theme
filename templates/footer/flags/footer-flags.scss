@@ -1,0 +1,64 @@
+.footer-flags {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  grid-gap: 2rem;
+  text-align: center;
+
+  img {
+    margin: 0 auto;
+  }
+
+  &__image-eu {
+    width: 100%;
+    max-width: 10rem;
+  }
+
+  &__image-finances {
+    width: 100%;
+    max-width: 6.25rem;
+  }
+
+  &__image-poland {
+    width: 100%;
+    max-width: 7.5rem;
+  }
+
+  &__image-iso {
+    max-height: 3.125rem;
+  }
+
+  @include breakpoint-sm {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: unset;
+    grid-gap: 2rem;
+  }
+
+  @include breakpoint-lg {
+    grid-template-columns: repeat(5, auto);
+    grid-gap: .875rem;
+
+    img {
+      transform: scale(.75);
+    }
+
+    &__image-eu {
+      width: auto;
+    }
+
+    &__image-finances {
+      width: auto;
+    }
+
+    &__image-poland {
+      width: 9.375rem;
+    }
+  }
+
+  @include breakpoint-xl {
+    img {
+      transform: scale(1);
+    }
+  }
+}

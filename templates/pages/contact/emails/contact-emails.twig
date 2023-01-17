@@ -1,0 +1,13 @@
+<div class="contact-emails">
+    {% for acf in acf %}
+        <div>
+            <div class="mb-12 mb-lg-16 heading-lg">{{ acf.heading }}</div>
+            {% include 'shared/contact-data/contact-data.twig' with {
+                acf: {
+                    type: 'email',
+                    contact: acf.email
+                }
+            } %}
+        </div>
+    {% endfor %}
+</div>

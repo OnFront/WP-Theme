@@ -1,0 +1,18 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    {% cache cache.key %}
+        <div class="media" data-js-media>
+            <div class="container media__grid">
+
+                <div class="media__head">
+                    <h1 class="mb-48 mb-lg-32 heading-xl media__header">{{ post.meta('intro').header }}</h1>
+                    {% include 'pages/media/filter/media-filter.twig' with {acf : post.meta('filter')} %}
+                </div>
+
+                {% include 'pages/media/posts/media-posts.twig' %}
+
+            </div>
+        </div>
+    {% endcache %}
+{% endblock %}

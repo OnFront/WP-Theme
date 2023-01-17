@@ -1,0 +1,37 @@
+<div class="front-intro-mobile">
+
+    <div class="container front-intro-mobile__container">
+        <div class="front-intro-mobile__top">
+            <a class="front-intro-mobile__menu-link front-intro-mobile__menu-link--active" href="{{ store.theme.main.payEyePointsUrl }}">
+                {{ svg(asset('shared/place.svg')) }}
+                {{ t.locationWithPayEye|t }}
+            </a>
+
+            <a class="front-intro-mobile__menu-link" href="{{ store.theme.main.promotionPageUrl }}">
+                {{ t.discountWithPayEye|t }}
+            </a>
+        </div>
+    </div>
+
+    <div class="mb-32 container front-intro-mobile__grid">
+        {% include 'pages/front/big6-banner-mobile/front-big6-banner-mobile.twig' with {acf: post.meta('big6_promo_banner_mobile') } %}
+
+        {% for acf in acf.items %}
+            <div class="front-intro-mobile__card">
+                {% include 'shared/webp/webp.twig' with {
+                    image: acf.imageMobile
+                } %}
+                <div class="front-intro-mobile__card-inner">
+                    <div class="heading-xl front-intro-mobile__heading">{{ acf.heading }}</div>
+                    <a class="front-intro-mobile__link" href="{{ acf.btn.url }}">
+                        {{ acf.btn.title }}
+                    </a>
+                    <a class="front-intro-mobile__btn" href="{{ acf.btn.url }}">
+                        <span class="arrow arrow--right front-intro-mobile__arrow"></span>
+                    </a>
+                </div>
+                <a class="front-intro-mobile__btn-overlay" href="{{ acf.btn.url }}"></a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

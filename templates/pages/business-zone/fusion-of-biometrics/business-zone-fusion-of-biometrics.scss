@@ -1,0 +1,137 @@
+.business-zone-fusion-of-biometrics {
+  text-align: center;
+  margin-bottom: 5rem;
+
+  &__items {
+    display: grid;
+    grid-gap: 2rem;
+  }
+
+  &__icon-wrapper {
+    height: 5rem;
+    width: 5rem;
+    background-color: $green-100;
+    border-radius: .75rem;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+  }
+
+  &__description {
+    position: relative;
+    color: $green-400;
+    text-align: center;
+    padding: 3rem 2.5rem 2rem;
+
+    &:before,
+    &:after {
+      position: absolute;
+      z-index: -1;
+      content: '';
+      height: 100%;
+    }
+
+    &:before {
+      top: 0;
+      left: 1.5rem;
+      width: calc(100% - 1.5rem);
+      background-color: $green-100;
+      border-radius: .75rem;
+    }
+
+    &:after {
+      top: 1.5rem;
+      left: 0;
+      width: calc(100% - 1.5rem);
+      border-radius: .75rem;
+      border: 1px solid $green-400;
+    }
+  }
+
+  @include breakpoint-lg {
+    text-align: left;
+    margin-bottom: 6rem;
+
+    &__heading {
+      text-align: center;
+    }
+
+    &__items {
+      position: relative;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1.5rem 11rem;
+    }
+
+    &__item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: 1.25rem;
+
+      &:nth-child(1) {
+        order: 1;
+      }
+
+      &:nth-child(2) {
+        order: 2;
+      }
+
+      &:nth-child(3) {
+        order: 3;
+      }
+
+      &:nth-child(4) {
+        order: 1;
+      }
+
+      &:nth-child(5) {
+        order: 2;
+      }
+
+      &:nth-child(6) {
+        order: 6;
+      }
+
+
+    }
+
+    &__diver {
+      position: absolute;
+      top: 2rem;
+      left: calc(50% - 1px);
+      width: 2px;
+      height: calc(100% - 4rem);
+      background-image: linear-gradient($grey-200 33%, rgba(255, 255, 255, 0) 0%);
+      background-position: right;
+      background-size: 4px 7px;
+      background-repeat: repeat-y;
+    }
+
+    &__diver-icon-wrapper {
+      position: absolute;
+      top: calc(50% - 2rem);
+      left: -2rem;
+      background: $color-white;
+      box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.35);
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+    }
+
+    &__description {
+      display: flex;
+      justify-content: center;
+      padding-top: 2.5rem;
+
+      &:after {
+        top: .875rem;
+      }
+    }
+
+    &__description-inner {
+      max-width: 51rem;
+    }
+  }
+}

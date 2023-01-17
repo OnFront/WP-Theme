@@ -1,0 +1,24 @@
+{# @var merchant  \App\Core\Post\MerchantPost  #}
+
+{% set branch = merchant.branches|first %}
+{% set isJustOneBranch = merchant.countActiveBranches == 1 %}
+
+{% if merchant.post_status == 'publish' %}
+    <a class="customer-zone-discount-card" href="{{ store.theme.main.payEyePointsUrl~'?query='~merchant.title }}">
+        <img class="mb-lg-16 customer-zone-discount-card__logo" src="{{ merchant.logo.url }}" alt="">
+        <div class="customer-zone-discount-card__content">
+            <div class="heading-md mb-08">{{ merchant.title }}</div>
+            <div class="mb-08 mb-lg-16 customer-zone-discount-card__address">
+                {% if isJustOneBranch %}
+                    {{ branch.address.street ~ ', ' ~ branch.address.city }}
+                {% else %}
+                    {{ branch.address.city }}
+                {% endif %}
+            </div>
+            <div class="heading-md"><span>{{ merchant.promotion.title }}</span></div>
+        </div>
+        <div class="d-lg-none">
+            {% include 'shared/arrow-block/arrow-block-right.twig' %}
+        </div>
+    </a>
+{% endif %}

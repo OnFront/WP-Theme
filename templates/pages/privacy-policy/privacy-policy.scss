@@ -1,0 +1,11 @@
+.privacy-policy {
+  max-width: 48.75rem;
+  margin: 5rem auto 3rem auto;
+  text-align: center;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.2rem;
+  }
+}

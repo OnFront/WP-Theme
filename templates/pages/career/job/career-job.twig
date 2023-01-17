@@ -1,0 +1,16 @@
+<div class="career-job">
+    <div class="mb-24 text-align-center text-align-lg-left heading-lg career-job__title">{{ acf.title }}</div>
+
+    <div class="career-job__offer">
+        {% for job in acf.jobs %}
+            {% include 'shared/button-icon/button-icon.twig' with {
+                btn: {
+                    title : job.title,
+                    target: '_blank',
+                    url: job.url,
+                },
+                icon: asset('shared/download.svg')
+            } %}
+        {% endfor %}
+    </div>
+</div>

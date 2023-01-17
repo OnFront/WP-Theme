@@ -1,0 +1,29 @@
+<div class="blog-pagination">
+
+    {% if pagination.prev %}
+        <a href="{{ pagination.prev.link }}"
+           class="prev wow fadeIn {{ pagination.prev.link|length ? '' : 'invisible' }}">
+            <span class="arrow arrow--medium arrow--left blog-pagination__arrow"></span>
+        </a>
+    {% endif %}
+
+    <ul class="blog-pagination__pages">
+        {% for page in pagination.pages %}
+            <li class="blog-pagination__number-wrapper wow fadeIn" data-wow-delay=".{{ loop.index }}s">
+                {% if page.link %}
+                    <a href="{{ page.link }}"
+                       class="blog-pagination__number {{ page.current ? 'blog-pagination__number--current' }}">{{ page.title }}</a>
+                {% else %}
+                    <span class="blog-pagination__number {{ page.current ? 'blog-pagination__number--current' }}">{{ page.title }}</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+    {% if pagination.next %}
+        <a href="{{ pagination.next.link }}" class="next wow fadeIn {{ pagination.next.link|length ? '' : 'invisible' }}">
+            <span class="arrow arrow--medium arrow--right blog-pagination__arrow"></span>
+        </a>
+    {% endif %}
+
+</div>

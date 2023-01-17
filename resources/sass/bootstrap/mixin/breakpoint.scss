@@ -1,0 +1,73 @@
+@mixin breakpoint-sm {
+  @media (min-width: $col-sm) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md {
+  @media (min-width: $col-md) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lg {
+  @media (min-width: $col-lg) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xl {
+  @media (min-width: $col-xl) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xxl {
+  @media (min-width: $col-xxl) {
+    @content;
+  }
+}
+
+@mixin breakpoint-sm-max {
+  @media (max-width: $col-sm - 1px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md-max {
+  @media (max-width: $col-md - 1px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lg-max {
+  @media (max-width: $col-lg - 1px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xl-max {
+  @media (max-width: $col-xl - 1px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-header-desktop {
+  @media (min-width: $header-mobile) {
+    @content;
+  }
+}
+
+@mixin breakpoint-header-mobile {
+  @media (max-width: $header-mobile) {
+    @content;
+  }
+}
+
+
+
+@mixin breakpoint-lg--max {
+  @media (max-width: $col-xl - 1px) {
+    @content;
+  }
+}

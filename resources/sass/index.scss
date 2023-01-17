@@ -1,0 +1,36 @@
+@import "bootstrap/reset";
+
+@import "global/colors";
+@import "global/icons";
+@import "global/fonts";
+@import "global/mixin";
+
+@import "../../node_modules/photoswipe/dist/photoswipe.css";
+
+@import "bootstrap/base";
+
+@import "bootstrap/plugin/*";
+@import "plugin/*";
+
+@import "global/html";
+
+@import "global/keyframes.scss";
+
+@import "global/wysiwyg";
+
+@import "global/classes.scss";
+
+@import "components/**/*";
+@import "elastic-layout/*";
+@import "ui/**/*";
+
+@import "../../templates/shared/**/*";
+@import "../../templates/navigation/**/*";
+@import "../../templates/top-bar/**/*";
+@import "../../templates/footer/**/*";
+@import "../../templates/pages/**/**/**/*";
+@import "../../templates/components/**/*";
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

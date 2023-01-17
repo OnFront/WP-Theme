@@ -1,0 +1,6 @@
+<form class="form-search {{ class }}" method="get" action="{{ store.siteUrl }}">
+    {% include 'shared/input-search/input-search.twig' with {
+        name: 's',
+        placeholder: t.searchFormPlaceholder|t
+    } %}
+</form>

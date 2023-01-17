@@ -1,0 +1,38 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    <header class="post">
+        <div class="container post__grid">
+            <div>
+                {% include 'shared/webp/webp.twig' with {
+                    image: post.thumbnail,
+                    class: 'mb-36 mb-lg-32 post__image',
+                } %}
+
+                <div class="d-none d-lg-block">
+                    {% include 'pages/post/back/post-back.twig' %}
+                </div>
+            </div>
+
+            <div class="post__content">
+                <div class="mb-36 post__share">
+                    {% include 'pages/post/share/post-share.twig' %}
+                </div>
+
+                <time class="d-block mb-20">{{ post.date }}</time>
+
+                <h1 class="mb-42 mb-lg-24 heading-xl">{{ post.title }}</h1>
+
+                <img class="d-none d-lg-block post__circle" src="{{ asset('shared/circle.svg') }}" alt="">
+
+            </div>
+        </div>
+    </header>
+
+    <article>
+        {% include 'pages/post/layout/post-layout.twig' %}
+    </article>
+
+    {% include 'pages/post/near/post-near.twig' %}
+
+{% endblock %}

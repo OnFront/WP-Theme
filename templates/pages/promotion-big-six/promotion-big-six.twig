@@ -1,0 +1,7 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    {% include 'pages/promotion-big-six/banner/banner.twig' with { acf: post.meta('banner')} %}
+    {% include 'pages/promotion-big-six/promo/promo.twig' with { acf: post.meta('promotion')} %}
+    {% include 'pages/promotion-big-six/application/application.twig' with { acf: post.meta('application')} %}
+{% endblock %}

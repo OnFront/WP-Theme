@@ -1,0 +1,20 @@
+.blog-posts {
+
+  &__body {
+    display: grid;
+    grid-gap: 1.5rem;
+  }
+
+  @include breakpoint-md {
+    &__body {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include breakpoint-lg {
+    &__body {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 4rem 1.25rem;
+    }
+  }
+}

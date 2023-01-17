@@ -1,0 +1,66 @@
+.pilot-achievements {
+  padding: 0 0 7rem;
+  text-align: center;
+  overflow: hidden;
+
+  &__body {
+    display: grid;
+    grid-gap: 3.2rem;
+  }
+
+  &__heading {
+    margin-bottom: 1.2rem;
+  }
+
+  &__image-wrapper {
+    position: relative;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__value {
+    color: $color-secondary;
+  }
+
+  &__claim {
+    color: $color-primary;
+    opacity: .25;
+  }
+
+  &__item {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include breakpoint-lg {
+    padding: 0 0 7rem;
+    text-align: left;
+
+    &__body {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 7rem;
+      align-items: center;
+    }
+
+    &__image-wrapper {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: calc(-50% - 50vw);
+        height: 100%;
+        width: calc(100% + 50vw);
+        content: '';
+        background-color: $green-100;
+        z-index: -1;
+        border-radius: 0 1.5rem 1.5rem 0;
+      }
+    }
+  }
+}

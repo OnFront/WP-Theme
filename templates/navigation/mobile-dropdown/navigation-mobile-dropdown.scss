@@ -1,0 +1,13 @@
+.navigation-mobile-dropdown {
+  list-style-type: none;
+  margin-left: 0;
+  text-align: center;
+
+  &__link {
+    color: $navy-600;
+    text-decoration: none;
+    padding: .5rem;
+    display: inline-block;
+    transition: opacity ease-in-out .4s;
+  }
+}

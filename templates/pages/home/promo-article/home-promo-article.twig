@@ -1,0 +1,34 @@
+<div class="promo-article">
+    <div class="container promo-article__grid">
+
+        {% include 'shared/webp/webp.twig' with {
+            image: post.thumbnail,
+            class: 'promo-article__image',
+            classPicture: 'mb-24 mb-lg-0'
+        } %}
+
+        <img class="d-none d-lg-block promo-article__circle" src="{{ asset('shared/circle.svg') }}" alt="">
+
+        <div>
+            <div class="mb-24 heading-lg">{{ post.title }}</div>
+            <div class="mb-24 mb-lg-48">{{ post.post_excerpt }}</div>
+            <div class="d-lg-none">
+                {% include 'shared/button-outlined/button-outlined.twig' with {
+                    btn: {
+                        url: post.link,
+                        title: t.buttonReadMore|t,
+                    }
+                } %}
+            </div>
+            <div class="d-none d-lg-block">
+                {% include 'shared/link-border/link-border.twig' with {
+                    btn: {
+                        url: post.link,
+                        title: t.buttonReadMore|t,
+                    }
+                } %}
+            </div>
+        </div>
+
+    </div>
+</div>

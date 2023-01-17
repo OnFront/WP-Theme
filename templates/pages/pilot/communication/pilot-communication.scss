@@ -1,0 +1,27 @@
+.pilot-communication {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  text-align: center;
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  @include breakpoint-lg {
+    text-align: left;
+
+    &__body {
+      flex-direction: row-reverse;
+
+      & > div {
+        flex: 0 0 50%;
+      }
+    }
+  }
+}

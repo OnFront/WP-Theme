@@ -1,0 +1,17 @@
+.media-filter {
+  display: grid;
+  grid-gap: 1.5rem;
+  max-width: 48.75rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__select-title {
+    margin-bottom: .75rem;
+    font-size: .875rem;
+  }
+
+  @include breakpoint-lg {
+    grid-template-columns: auto 17.5rem;
+    grid-gap: 1.25rem;
+  }
+}

@@ -1,0 +1,50 @@
+.map-points-search {
+  background-color: $green-400;
+  padding: 1rem 1.5rem;
+  display: none;
+
+  &--active {
+    display: block;
+    position: relative;
+    z-index: 9999;
+  }
+
+  &__heading {
+    color: $color-white;
+  }
+
+  &__filter-wrapper {
+    background-color: $color-white;
+    border-radius: 6px;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__search-filter {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: .75rem;
+  }
+
+  @include breakpoint-lg {
+    padding-bottom: 2rem;
+
+    &__filter-wrapper {
+      position: absolute;
+      border-radius: 100%;
+      right: 0;
+      bottom: -3.625rem;
+      background: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    &__search-filter {
+      grid-gap: 0;
+    }
+  }
+}

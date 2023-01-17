@@ -1,0 +1,45 @@
+.career {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  @include breakpoint-lg {
+    position: relative;
+    margin-top: 8rem;
+
+    &:before {
+      position: absolute;
+      top: -4rem;
+      left: calc(50% + 19rem);
+      width: 100%;
+      height: calc(100% + 8rem);
+      content: '';
+      background: $green-100;
+      border-radius: 1.5rem 0 0 1.5rem;
+      z-index: -1;
+    }
+
+    &__body {
+      display: grid;
+      grid-template-columns: 5fr 32.5rem;
+      grid-gap: 2.5rem;
+    }
+  }
+
+  @include breakpoint-xxl {
+    &__body {
+      grid-template-columns: 5fr 30rem;
+      grid-gap: 12rem;
+    }
+  }
+
+}
+
+.page-template-CareerController {
+  overflow-x: hidden;
+}

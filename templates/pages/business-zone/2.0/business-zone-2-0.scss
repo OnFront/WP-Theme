@@ -1,0 +1,117 @@
+.business-zone-2-0 {
+  $block: '.business-zone-2-0';
+  text-align: center;
+  padding-bottom: 4rem;
+
+  &__description {
+    max-width: 36.25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__pos-picture {
+    position: relative;
+    margin-bottom: 2.625rem;
+  }
+
+  &__pos-image {
+    position: relative;
+    transition: left ease-in-out .333s;
+    left: 0;
+    width: 100%;
+    max-width: 36.25rem;
+
+    &--done {
+      left: -25vw;
+    }
+  }
+
+  &__content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  &__content-items {
+    display: grid;
+    grid-gap: 1.5rem;
+  }
+
+  &__content-item {
+    display: grid;
+    grid-gap: .75rem;
+    max-width: 35rem;
+    margin: 0 auto;
+  }
+
+  &__content-icon {
+    position: relative;
+    top: .3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include breakpoint-lg {
+    position: relative;
+    height: 2060px;
+    padding-bottom: 13.75rem;
+
+    &__pos {
+      position: sticky;
+      top: 22.875rem;
+
+      &:before {
+        position: absolute;
+        top: -5.375rem;
+        height: calc(100% + 10.75rem);
+        content: '';
+        border-radius: 0 4rem 4rem 0;
+        left: -25vw;
+        width: 25vw;
+        transition: left ease-in-out .333s, background-color ease-in-out .333s;
+        background-color: transparent;
+      }
+
+      &--done {
+        &:before {
+          left: 0;
+          background-color: $green-100;
+        }
+      }
+    }
+
+    &__pos-picture {
+      margin-bottom: 0;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    &__content {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      left: 50vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      opacity: 0;
+      transition: opacity ease-in-out .333s;
+      padding: 0;
+
+      &--done {
+        opacity: 1;
+      }
+    }
+
+    &__content-items {
+      grid-gap: .75rem;
+    }
+
+    &__content-item {
+      grid-template-columns: auto 1fr;
+      margin: 0;
+    }
+  }
+}

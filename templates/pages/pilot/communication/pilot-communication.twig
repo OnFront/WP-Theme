@@ -1,0 +1,15 @@
+<div class="pilot-communication">
+    <div class="container pilot-communication__body {{ acf.settings }}">
+
+        {% include 'shared/webp/webp.twig' with {
+            image: acf.imageDesktop,
+            class: 'pilot-communication__image'
+        } %}
+
+        <div>
+            <div class="mb-12 heading-xl">{{ acf.header }}</div>
+            <div class="wysiwyg">{{ acf.content }}</div>
+        </div>
+
+    </div>
+</div>

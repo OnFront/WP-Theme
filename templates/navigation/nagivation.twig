@@ -1,0 +1,20 @@
+<nav class="navigation {{ class }}" data-js-navigation>
+    <div class="container">
+        <div class="navigation__desktop">
+            {% include 'navigation/logo/navigation-logo.twig' %}
+            <div class="navigation__desktop-menu-wrapper">
+                {% include 'navigation/menu/navigation-menu.twig' %}
+                {% include 'shared/join-to-payeye/join-to-payeye.twig' with {
+                    class: 'button-solid--small'
+                } %}
+            </div>
+        </div>
+
+        <div class="navigation__mobile">
+            {% include 'navigation/hamburger/hamburger.twig' %}
+            {% include 'navigation/logo/navigation-logo.twig' %}
+            <div></div>
+        </div>
+    </div>
+    {% include 'navigation/mobile/navigation-mobile.twig' %}
+</nav>

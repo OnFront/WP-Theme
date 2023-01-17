@@ -1,0 +1,181 @@
+.team-key {
+  $block: '.team-key';
+  text-align: center;
+  margin-bottom: 3rem;
+
+  &__body {
+    display: grid;
+    grid-gap: 4rem;
+  }
+
+  &__card {
+    position: relative;
+    text-decoration: none;
+    display: grid;
+    justify-content: center;
+    overflow: hidden;
+
+    &--active #{$block}__back-card {
+      opacity: 1;
+    }
+
+    &--active #{$block}__image-wrapper {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    z-index: 4;
+    transition: opacity ease-in-out .333s;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 27rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 15.625rem;
+    object-fit: contain;
+  }
+
+  &__position {
+    text-align: center;
+    color: $navy-800;
+  }
+
+  &__linkedin-box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-white;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 100%;
+
+    &:before {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      z-index: 2;
+      border-radius: 100%;
+      content: '';
+      background-color: $green-400;
+      transition: background-color ease-in-out .333s;
+    }
+  }
+
+  &__linkedin {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__linkedin-overlay-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+
+  &__content {
+    max-width: 15.625rem;
+  }
+
+  &__see-more {
+    color: $green-400;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__back-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: $navy-600;
+    background-color: $color-white;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity ease-in-out .333s;
+  }
+
+  &__back-card-description {
+    height: calc(100% - 6rem);
+    overflow: auto;
+    padding-right: 1.5rem;
+
+    &::-webkit-scrollbar {
+      width: .25rem;
+      border-radius: 1.5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $grey-100;
+      border-radius: 1.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $navy-800;
+      border-radius: 1.5rem;
+    }
+  }
+
+  @include breakpoint-md {
+    margin-bottom: 4rem;
+
+    &__body {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @include breakpoint-lg {
+    &__body {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @include breakpoint-xl {
+    &__body {
+      grid-gap: 1.5rem;
+    }
+
+    &__card {
+      border-radius: 1.5rem;
+      border: 1px solid $grey-200;
+      padding: 4rem 1rem 3rem 1rem;
+      transition: border-color ease-in-out .333s;
+
+      &:hover {
+        border-color: $green-400;
+      }
+    }
+
+    &__image-wrapper {
+      max-width: 16rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__back-card {
+      padding: 1.5rem;
+    }
+  }
+}
+
+.page-template-TeamController-php {
+  overflow-x: hidden;
+}

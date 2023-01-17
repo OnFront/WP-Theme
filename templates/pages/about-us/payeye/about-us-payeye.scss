@@ -1,0 +1,82 @@
+.about-us-payeye {
+  $block: '.about-us-payeye';
+  text-align: center;
+  position: relative;
+  padding-top: 4.5rem;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+
+  &:before {
+    position: absolute;
+    top: -6rem;
+    right: -2rem;
+    width: calc(100% + 4rem);
+    height: 20rem;
+    content: '';
+    background-color: $green-100;
+    z-index: -1;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__video-image-wrapper {
+    position: relative;
+    margin-bottom: 2.25rem;
+    z-index: 2;
+  }
+
+  video {
+    border-radius: 1.5rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  @include breakpoint-lg {
+    text-align: left;
+    padding-top: 4.75rem;
+    padding-bottom: 4.75rem;
+    margin-top: 6.25rem;
+    margin-bottom: 4rem;
+
+    &:before {
+      top: 0;
+      right: calc(50vw + 2rem);
+      border-radius: 0 1.5rem 1.5rem 0;
+      height: 100%;
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr .7fr;
+      grid-gap: 4.5rem;
+      align-items: center;
+    }
+
+    &__content {
+      position: relative;
+      top: -5rem;
+    }
+
+    &__circle {
+      position: absolute;
+      top: -7rem;
+      left: -4rem;
+    }
+
+    &__links {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__video-image-wrapper {
+      margin-bottom: 0;
+    }
+  }
+}

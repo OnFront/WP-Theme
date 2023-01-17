@@ -1,0 +1,19 @@
+<div class="form-order" id="order-form">
+    <input type="hidden" id="siteUrl" value="{{ site.url }}">
+    <div class="container form-order__grid">
+        {% include 'shared/webp/webp.twig' with {
+            class: 'w-100 form-order__image'
+        } %}
+        <div>
+            <div class="text-align-center text-align-lg-left">
+                <div class="mb-24 heading-xl">{{ acf.heading }}</div>
+                <div class="mb-64">{{ acf.description }}</div>
+            </div>
+
+            <div id="order-form-app">{# svelte order-form app #}</div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href='{{ asset('order-form/build/bundle.css') }}?ver={{ cacheVersion }}' type='text/css' media='all'/>
+<script type="text/javascript" defer src='{{ asset('order-form/build/bundle.js') }}?ver={{ cacheVersion }}'></script>

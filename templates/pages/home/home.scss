@@ -1,0 +1,24 @@
+.home {
+  &__form-search {
+    max-width: 23.75rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include breakpoint-lg {
+    &__search-section {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    &__form-search {
+      max-width: 23.75rem;
+      margin: 0;
+    }
+  }
+}
+
+
+
+

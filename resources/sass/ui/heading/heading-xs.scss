@@ -1,0 +1,11 @@
+.heading-xs {
+  font-family: $font-family-point;
+  font-size: .875rem;
+  color: $navy-800;
+  line-height: 1.05rem;
+  font-weight: 600;
+
+  span {
+    color: $green-400;
+  }
+}

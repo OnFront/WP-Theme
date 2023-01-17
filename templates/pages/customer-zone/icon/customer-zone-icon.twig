@@ -1,0 +1,11 @@
+<div class="customer-zone-icon">
+    <div class="container customer-zone-icon__container">
+        {% for acf in acf.icon %}
+            <div>
+                {{ svg(acf.image.url,'customer-zone-icon__icon') }}
+                <h3 class="heading-md mb-24 customer-zone-icon__heading">{{ acf.heading }}</h3>
+                <div>{{ acf.description }}</div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

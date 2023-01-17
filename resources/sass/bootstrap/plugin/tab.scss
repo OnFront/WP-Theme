@@ -1,0 +1,20 @@
+[data-tab] {
+
+  [data-tab-header] {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  [data-tab-body] {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .tab-active {
+    opacity: 1;
+    display: block;
+    pointer-events: all;
+  }
+}

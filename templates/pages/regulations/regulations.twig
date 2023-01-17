@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+
+{% block container %}
+
+    <div class="container">
+
+        <div class="mb-36">
+            {% include 'pages/regulations/items/regulations-items.twig' with {acf : post.meta('regulations')} %}
+        </div>
+
+        <div class="mb-36">
+            {% include 'pages/regulations/items/regulations-items.twig' with {acf : promo} %}
+        </div>
+
+        <div class="mb-36">
+            {% include 'pages/regulations/items/regulations-items.twig' with {acf : {
+                header : post.meta('regulations_archive').header,
+                items : archive,
+            }} %}
+        </div>
+
+    </div>
+
+{% endblock %}

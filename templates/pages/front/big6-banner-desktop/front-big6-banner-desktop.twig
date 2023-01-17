@@ -1,0 +1,29 @@
+{% if post.meta('big6settings').isEnable %}
+    <section class="wow fadeInUp front-big6-banner-desktop">
+        <div class="container">
+            <div class="front-big6-banner-desktop__content front-big6-banner-desktop__content--{{ translator.current }}">
+                <header class="front-big6-banner-desktop__header">
+                    <div class="front-big6-banner-desktop__title">
+                        {{ acf.title }}
+                    </div>
+
+                    <div class="front-big6-banner-desktop__description">
+                        {{ acf.description }}
+                    </div>
+                </header>
+
+                {% if acf.image %}
+                    <img class="front-big6-banner-desktop__image front-big6-banner-desktop__image--{{ translator.current }}" src="{{ acf.image.url }}" alt="">
+                {% endif %}
+
+                {% if acf.link %}
+                    <div class="front-big6-banner-desktop__link-wrapper">
+                        <a class="front-big6-banner-desktop__link" href="{{ acf.link.url }}">{{ acf.link.title }}</a>
+                    </div>
+                {% endif %}
+
+                <a class="front-big6-banner-desktop__link-overlay" href="{{ acf.link.url }}" rel="nofollow"></a>
+            </div>
+        </div>
+    </section>
+{% endif %}

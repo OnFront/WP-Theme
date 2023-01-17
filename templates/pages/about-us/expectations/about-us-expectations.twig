@@ -1,0 +1,22 @@
+<div class="about-us-expectations">
+    <div class="container about-us-expectations__grid">
+
+        <div class="mb-24 d-lg-none">
+            {% include 'shared/webp/webp.twig' with {
+                image: acf.imageMobile,
+            } %}
+        </div>
+
+        <div class="d-none d-lg-block">
+            {% include 'shared/webp/webp.twig' with {
+                image: acf.imageDesktop,
+            } %}
+        </div>
+
+        <div>
+            <div class="mb-12 heading-xl">{{ acf.heading }}</div>
+            <div class="wysiwyg">{{ acf.description }}</div>
+        </div>
+
+    </div>
+</div>

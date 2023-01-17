@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html {{ site.language_attributes }}>
+<head>
+
+    {% if cookie.activeAnalytics %}
+        {% include 'scripts/google-analytics.twig' %}
+        {% include 'scripts/hotjar.twig' %}
+    {% endif %}
+
+    {% if cookie.activeAds %}
+        {% include 'scripts/facebook.twig' %}
+    {% endif %}
+
+    <meta name="facebook-domain-verification" content="d3zvs11nsp0pao1c4k6o2gnfqgej1p"/>
+    <meta charset="{{ site.charset }}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="{{ asset('favicon.png') }}" type="image/gif" sizes="512x512">
+    {{ wp_head }}
+   
+    {{ loadInlineCss() }}
+
+</head>
+
+<body class="{{ body_class }}">
+{% if cookie.activeAnalytics %}
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZ3D4WD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+{% endif %}
+
+{% block topBar %}
+    {% include 'top-bar/top-bar.twig' %}
+{% endblock %}
+
+{% block navigation %}
+    {% include 'navigation/nagivation.twig' %}
+{% endblock %}
+
+<main>
+    {% block container %}{% endblock %}
+</main>
+
+{% block footer %}
+    {% cache footerCache.key %}
+        {% include 'footer/footer.twig' %}
+    {% endcache %}
+
+    {% block downloadApp %}
+        {% include 'shared/download-app/download-app.twig' %}
+    {% endblock %}
+    {% include 'shared/cookie/cookie.twig' %}
+{% endblock %}
+{{ wp_footer }}
+</body>
+</html>

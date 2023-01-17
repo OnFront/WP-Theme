@@ -1,0 +1,134 @@
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+}
+
+.slick-slide {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 1px;
+
+  &:focus {
+    outline: none;
+  }
+
+  [dir="rtl"] & {
+    flex-direction: row-reverse;
+  }
+
+  &.slick-loading img {
+    display: none;
+  }
+
+  &.dragging img {
+    pointer-events: none;
+  }
+
+  .slick-initialized & {
+    display: block;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+
+  .slick-vertical & {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  margin-left: 0;
+  flex-wrap: wrap;
+
+  li {
+    button {
+      cursor: pointer;
+      width: .75rem;
+      height: .75rem;
+      position: relative;
+      display: block;
+      text-indent: -999px;
+      border: 0;
+      padding: 0;
+      background-color: transparent;
+      overflow: hidden;
+      margin: 0 .4rem;
+      border-radius: 100%;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: .75rem;
+        height: .75rem;
+        border-radius: 50%;
+        background-color: #e4e4e4;
+      }
+    }
+
+    &.slick-active {
+      button {
+        cursor: default;
+
+        &:after {
+          width: 1.2rem;
+          height: 1.2rem;
+          background-color: $color-secondary;
+        }
+      }
+    }
+  }
+}

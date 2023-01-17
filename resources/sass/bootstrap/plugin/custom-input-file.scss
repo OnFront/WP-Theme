@@ -1,0 +1,41 @@
+.custom-input-file {
+  position: relative;
+
+  @include breakpoint-lg {
+    display: flex;
+    align-items: center;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__accept-files {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint-lg {
+      justify-content: left;
+    }
+  }
+
+  &__chose-file {
+    font-size: 1.2rem;
+    width: 100%;
+
+    @include breakpoint-lg {
+      position: absolute;
+      top: calc(100% + .5rem);
+    }
+  }
+
+  &__trigger {
+    color: $color-primary;
+    display: inline-block;
+    margin-right: 1.2rem;
+  }
+
+  svg {
+    margin-right: 1.2rem;
+  }
+}

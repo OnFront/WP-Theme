@@ -1,0 +1,51 @@
+<div class="map-points-merchant" data-js-map-points-merchant>
+
+    <div class="d-none d-lg-block">
+        <div class="map-points-merchant__back" data-js-open-list>
+            {% include 'shared/@arrow/arrow-left.twig' with {
+                class: 'map-points-merchant__arrow',
+            } %}
+            <span class="paragraph-sm">{{ t.mapPointsAllPoints|t }}</span>
+        </div>
+    </div>
+
+    <img src="" alt="" data-js-image class="mb-32 map-points-merchant__image">
+
+    <div class="map-points-merchant__inner">
+        <div class="mb-16 mb-lg-24 map-points-merchant__location-wrapper">
+            <img src="" alt="" data-js-logo-url class="map-points-merchant__logo">
+            <div>
+                <div data-js-title class="mb-04 heading-md"></div>
+                <div data-js-address class="mb-12 paragraph-xs"></div>
+                <div class="map-points-merchant__badges">
+                    <div data-js-promotion class="map-points-merchant__badge map-points-merchant__badge--promo">{{ t.listPartnersSeePromo|t }}</div>
+                    <div data-js-category class="map-points-merchant__badge"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div data-js-description-promo class="mb-24 paragraph-sm"></div>
+
+        <div class="map-points-merchant__buttons">
+            {% include 'shared/button-outlined/button-outlined.twig' with {
+                btn: {
+                    target: '_blank',
+                    title: t.buttonSeeMore|t,
+                },
+                attr: 'data-js-website-url',
+                class: 'button-outlined--small'
+            } %}
+
+            {% include 'shared/button-outlined/button-outlined.twig' with {
+                btn: {
+                    target: '_blank',
+                    title: t.navigate|t,
+                },
+                attr: 'data-js-navigate-url',
+                class: 'button-outlined--small'
+            } %}
+        </div>
+
+    </div>
+</div>

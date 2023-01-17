@@ -1,0 +1,14 @@
+<div class="customer-zone-intro" data-js-customer-zone-intro>
+    <div class="container customer-zone-intro__body">
+        {% include 'shared/webp/webp.twig' with {
+            class: 'customer-zone-intro__image mb-24 mb-lg-0',
+        } %}
+        <div class="customer-zone-intro__content">
+            <h1 class="heading-xl mb-24 mb-lg-16">{{ acf.heading }}</h1>
+            <div class="mb-24">{{ acf.description }}</div>
+            {% include 'shared/button-solid/button-solid.twig' with {
+                attr: 'data-js-scroll-to'
+            } %}
+        </div>
+    </div>
+</div>

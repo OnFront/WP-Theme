@@ -1,0 +1,59 @@
+@keyframes pulseGreen {
+    0% {
+      box-shadow: 0 0 0 1px rgba(0, 173, 147, 0.7);
+    }
+    
+    100% {
+      box-shadow: 0 0 0 20px rgba(0, 173, 147, 0);
+    }
+  }
+
+@keyframes pulseYellow {
+  0% {
+    box-shadow: 0 0 0 1px rgba(255, 189, 0, 0.7);
+  }
+  
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 189, 0, 0);
+  }
+}
+
+@keyframes transitionBackground {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardShow {
+  0% {
+    right: -7.8rem;
+  }
+
+  100% {
+    right: 1.25rem;
+  }
+}
+
+@keyframes cardHide {
+  0% {
+    right: 1.25rem;
+  }
+  
+  100% {
+    right: -7.8rem;
+  }
+}

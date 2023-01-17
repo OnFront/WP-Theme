@@ -1,0 +1,55 @@
+.cookies-modal {
+  max-width: 64rem;
+  padding: 1.5rem;
+  height: 100%;
+  border-radius: 0;
+
+  &__header {
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid $color-grey;
+  }
+
+  &__body {
+    overflow-y: scroll;
+    padding-right: 1.5rem;
+    max-height: calc(100vh - 16rem);
+
+    &::-webkit-scrollbar {
+      width: .4rem;
+      border-radius: 3.4rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $grey-100;
+      border-radius: 3.4rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $navy-800;
+      border-radius: 3.4rem;
+      height: 10rem;
+    }
+  }
+
+  &__text {
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(0, 173, 147, 0.1);
+  }
+
+  &__preference {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    align-items: center;
+  }
+
+  @include breakpoint-xxl {
+    max-height: 90vh;
+    border-radius: 1rem;
+    padding: 2.4rem;
+
+    &__body {
+      max-height: calc(100vh - 27rem);
+    }
+  }
+}

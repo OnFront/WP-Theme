@@ -1,0 +1,11 @@
+<script type="module">
+    import PhotoSwipeLightbox from '{{ theme.uri }}/public/photoswipe/dist/photoswipe-lightbox.esm.js';
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '{{ selector }}',
+        children: 'a',
+        pswpModule: () => import('{{ theme.uri }}/public/photoswipe/dist/photoswipe.esm.js')
+    });
+
+    lightbox.init();
+</script>

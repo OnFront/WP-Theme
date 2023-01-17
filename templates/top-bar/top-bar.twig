@@ -1,0 +1,22 @@
+<div class="top-bar">
+    <div class="container top-bar__body">
+
+        {% if fn('is_front_page') %}
+            <a class="top-bar__item top-bar__item--active" href="{{ store.theme.main.payEyePointsUrl }}">
+                {{ svg(asset('shared/place.svg')) }}
+                {{ t.locationWithPayEye|t }}
+            </a>
+
+            <a class="top-bar__item" href="{{ store.theme.main.promotionPageUrl }}">
+                {{ t.discountWithPayEye|t }}
+            </a>
+        {% endif %}
+
+        {% include 'shared/language/language.twig' %}
+
+        <div class="top-bar__divider"></div>
+        <a href="{{ store.theme.footer.donationPageUrl }}">
+            <img class="top-bar__image-ue" src="{{ asset('icon/menu/' ~ translator.current ~ '/eu-rectangle.svg') }}" alt="" width="121px" height="27px">
+        </a>
+    </div>
+</div>

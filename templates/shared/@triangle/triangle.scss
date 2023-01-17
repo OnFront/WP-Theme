@@ -1,0 +1,27 @@
+.triangle {
+
+  &--up {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $color-primary;
+  }
+
+  &--down {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $color-primary;
+  }
+
+  &--right {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid $color-primary;
+  }
+
+  &--left {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid $color-primary;
+  }
+
+}

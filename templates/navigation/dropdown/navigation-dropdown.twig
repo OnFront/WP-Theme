@@ -1,0 +1,7 @@
+<ul class="navigation-dropdown">
+    {% for child in item.children %}
+        <li>
+            <a class="navigation-dropdown__link" href="{{ child.link }}" target="{{ child.target }}">{{ child.title }}</a>
+        </li>
+    {% endfor %}
+</ul>

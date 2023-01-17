@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    <div class="home">
+
+        {% include 'pages/home/promo-article/home-promo-article.twig' with {post : promoPost} %}
+
+        <div class="container">
+            <div class="mb-48 mb-lg-94 home__search-section">
+                {% include 'pages/home/blog-header/home-blog-header.twig' with {
+                    acf : post.meta('content'),
+                    class: 'mb-48 mb-lg-0'
+                } only %}
+                {% include 'shared/form-search/form-search.twig' with {
+                    class: 'home__form-search'
+                } %}
+            </div>
+        </div>
+
+        <div class="mb-96">{% include 'shared/blog-posts/blog-posts.twig' %}</div>
+        <div class="mb-64">{% include 'shared/blog-pagination/blog-pagination.twig' with {pagination: posts.pagination} %}</div>
+
+
+    </div>
+{% endblock %}

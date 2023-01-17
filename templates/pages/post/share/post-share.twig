@@ -1,0 +1,20 @@
+<div class="share-post">
+
+    <div class="mb-lg-24 heading-sm">{{ t.postShare|t }}</div>
+
+    <div class="share-post__social-media">
+
+        <a class="share-post__link wow zoomIn" href="https://www.facebook.com/sharer/sharer.php?u={{ post.link }}" target="_blank">
+            {{ svg(asset('icon/social/facebook.svg'),'share-post__icon') }}
+        </a>
+
+        <a class="share-post__link wow zoomIn" href="https://twitter.com/intent/tweet?url={{ post.link }}" target="_blank">
+            {{ svg(asset('icon/social/twitter.svg'),'share-post__icon') }}
+        </a>
+
+        <a class="share-post__link wow zoomIn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ post.link }}" target="_blank">
+            {{ svg(asset('icon/social/linkedin.svg'),'share-post__icon') }}
+        </a>
+
+    </div>
+</div>

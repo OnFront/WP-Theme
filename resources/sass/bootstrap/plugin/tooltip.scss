@@ -1,0 +1,90 @@
+[data-tooltip] {
+  $triangle: 2.2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  [data-context] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: #FFFFFF;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+    border-radius: .9rem;
+    font-size: 1.4rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity ease-in-out .4s;
+    width: 30rem;
+
+    &:before {
+      position: absolute;
+      content: '';
+    }
+  }
+
+  &[data-placement="top"] {
+
+    [data-context] {
+      bottom: 5rem;
+      padding: 3.4rem 2.4rem 3.4rem 2.4rem;
+
+      &:before {
+        bottom: -2rem;
+        left: 2.4rem;
+        border-left: $triangle solid transparent;
+        border-right: $triangle solid transparent;
+        border-top: $triangle solid $color-white;
+      }
+    }
+
+  }
+
+  &[data-placement="bottom"] {
+
+    [data-context] {
+      padding: 3.4rem 2.4rem 2.4rem 2.4rem;
+
+      &:before {
+        top: -2rem;
+        left: 2.4rem;
+        border-left: $triangle solid transparent;
+        border-right: $triangle solid transparent;
+        border-bottom: $triangle solid $color-white;
+      }
+    }
+
+  }
+
+  &.tooltip-active {
+
+    [data-context] {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+  }
+
+  [data-close] {
+    position: absolute;
+    top: 1rem;
+    right: 1.8rem;
+
+    svg {
+      fill: rgba(39, 36, 69, 0.5);
+      transition: fill ease-in-out .4s;
+    }
+
+    &:hover {
+      svg {
+        cursor: pointer;
+        fill: rgba(39, 36, 69, 1);
+      }
+    }
+  }
+
+}
+
+

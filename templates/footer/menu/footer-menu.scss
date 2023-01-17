@@ -1,0 +1,16 @@
+.footer-menu {
+  margin-left: 0;
+  list-style-type: none;
+
+  &__link {
+    text-decoration: none;
+    color: $navy-600;
+    padding-bottom: .5rem;
+    display: block;
+    transition: color ease-in-out .3s;
+
+    &:hover {
+      color: $navy-800;
+    }
+  }
+}

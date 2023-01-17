@@ -1,0 +1,43 @@
+.contact-addresses {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  &__items {
+    display: grid;
+    grid-gap: 1.5rem;
+  }
+
+  &__item {
+    display: grid;
+    grid-gap: .75rem;
+  }
+
+  &__icon {
+    position: relative;
+    top: 3px;
+    width: 1.5rem;
+    margin: 0 auto;
+  }
+
+  &__city {
+    display: block;
+  }
+
+  @include breakpoint-lg {
+    text-align: left;
+
+    &__item {
+      grid-template-columns: auto 1fr;
+      grid-gap: 1.125rem;
+    }
+
+    &__address {
+      max-width: 22rem;
+    }
+
+    &__city {
+      display: inline;
+      margin-left: .4rem;
+    }
+  }
+}

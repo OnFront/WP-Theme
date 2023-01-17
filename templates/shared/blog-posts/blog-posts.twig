@@ -1,0 +1,9 @@
+<div class="blog-posts">
+    <div class="container">
+        <div class="blog-posts__body">
+            {% for post in posts %}
+                {% include 'shared/blog-post/blog-post.twig' %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

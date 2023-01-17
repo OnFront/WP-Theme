@@ -1,0 +1,22 @@
+<div class="business-zone-products">
+    <div class="container">
+        <div class="mb-16 mb-lg-12 heading-xl">{{ acf.heading }}</div>
+        <div class="mb-36 mb-lg-64">{{ acf.description }}</div>
+
+        <div class="business-zone-products__grid">
+            {% for acf in acf.items %}
+                <div class="business-zone-products__card">
+                    <div class="mb-24 mb-lg-12 heading-lg business-zone-products__card-heading">{{ acf.heading }}</div>
+                    <div class="business-zone-products__card-description">{{ acf.description }}</div>
+                    {% include 'shared/webp/webp.twig' with {
+                        image: acf.imageMobile,
+                        class: 'd-lg-none business-zone-products__image'
+                    } %}
+                    {% include 'shared/webp/webp.twig' with {
+                        class: 'd-none d-lg-block business-zone-products__image'
+                    } %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{% set imageUrl = post.isCustomImage ? Image(post.customImageUrl) : post.downloadImageUrl %}
+    {% set terms = post.terms %}
+    {% set parentTerm = '' %}
+    {% set childTerm = '' %}
+
+    {% for term in terms %}
+        {% if term.parent == 0 %}
+            {% set parentTerm = term %}
+        {% else %}
+            {% set childTerm = term %}
+        {% endif %}
+    {% endfor %}
+
+{% for key, id in mainSort %}
+    {% if post.ID == id %}
+        {% set loopIndex = key %}
+    {% endif %}
+{% endfor %}
+
+<div class="media-articles__card" data-parent-term-id="{{ parentTerm.ID }}" data-term-id="{{ childTerm.ID }}" style="order: {{ loopIndex }}">
+    <img class="media-articles__image" src="" data-src="{{ imageUrl }}" alt="">
+    <div>
+        <div class="media-articles__term">{{ translator.pL ? parentTerm.name : parentTerm.meta('title').en }}</div>
+        <a class="mb-12 heading-md media-articles__title" href="{{ post.externalUrl }}" target="_blank">{{ post.title|truncate(8) }}</a>
+        <div class="media-articles__post-title">{{ childTerm.name }}</div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{% if post %}
+    <div class="post-neighbor">
+        <img class="post-neighbor__image" src="{{ post.thumbnail.src }}" alt="">
+
+        <div class="post-neighbor__content">
+            <div class="mb-04">{{ post.date }}</div>
+            <div class="mb-16 heading-md post-neighbor__title">{{ post.title }}</div>
+
+            <a href="{{ post.link }}" class="post-neighbor__link">
+                {% if prev %}
+
+                    <svg width="16" height="8" viewBox="0 0 16 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.99 5L16 5L16 3L3.99 3L3.99 -1.04995e-06L3.49691e-07 4L3.99 8L3.99 5Z" fill="#00AD93"/>
+                    </svg>
+
+                    <div class="post-neighbor__name post-neighbor__name--prev">{{ t.postPrev|t }}</div>
+                {% else %}
+                    <div class="post-neighbor__name post-neighbor__name--next">{{ t.postNext|t }}</div>
+                    <svg width="16" height="8" viewBox="0 0 16 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.01 3H0V5H12.01V8L16 4L12.01 0V3Z"/>
+                    </svg>
+                {% endif %}
+            </a>
+
+        </div>
+    </div>
+{% endif %}

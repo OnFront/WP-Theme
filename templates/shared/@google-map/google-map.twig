@@ -1,0 +1,37 @@
+<script>
+    function centerMarker(latlng) {
+        let marker = L.marker([latlng.lat, latlng.lng]);
+        let group = new L.featureGroup([marker]);
+        map.setView([latlng.lat, latlng.lng], 17);
+    }
+
+    let autocomplete;
+
+    function initAutocomplete() {
+        let input = document.getElementById('autocomplete');
+
+        if (input) {
+            autocomplete = new google.maps.places.Autocomplete(
+                input,
+                {
+                    componentRestrictions: {'country': ['PL']},
+                }
+            );
+
+            autocomplete.addListener('place_changed', onPlaceChanged);
+        }
+    }
+
+    function onPlaceChanged() {
+        var place = autocomplete.getPlace();
+
+        var lating = {
+            lat: place.geometry.location.lat(),
+            lng: place.geometry.location.lng(),
+        }
+
+        centerMarker(lating);
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key={{ store.googleMapKey }}&libraries=places&language=pl&callback=initAutocomplete" defer></script>

@@ -1,0 +1,37 @@
+.arrow {
+  border-style: solid;
+  border-color: rgba(39, 36, 69, .5);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  position: relative;
+  transition: transform ease-in-out .4s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--right {
+    transform: rotate(-45deg);
+  }
+
+  &--left {
+    transform: rotate(135deg);
+  }
+
+  &--up {
+    transform: rotate(-135deg);
+  }
+
+  &--down {
+    transform: rotate(45deg);
+  }
+
+  &--thin {
+    border-width: 0 2px 2px 0;
+  }
+
+  &--medium {
+    padding: 4px;
+  }
+}

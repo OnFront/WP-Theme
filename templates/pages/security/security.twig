@@ -1,0 +1,6 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    {% include 'pages/security/faq/security-faq.twig' with {acf : post.meta('faq')} %}
+    {% include 'pages/security/secure/security-secure.twig' with {acf : post.meta('secure')} %}
+{% endblock %}

@@ -1,0 +1,13 @@
+<div class="about-us-history">
+    <div class="container">
+        <div class="mb-64 heading-xl about-us-history__heading">{{ acf.heading }}</div>
+        <div class="about-us-history__items">
+            {% for acf in acf.items %}
+                <div class="about-us-history__item">
+                    <div class="heading-lg about-us-history__year">{{ acf.year }}</div>
+                    <div class="about-us-history__content">{{ acf.content }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

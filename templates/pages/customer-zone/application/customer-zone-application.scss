@@ -1,0 +1,74 @@
+.customer-zone-application {
+  text-align: center;
+
+  &__image {
+    width: calc(100% - 2rem);
+  }
+
+  &__items {
+    text-align: left;
+    display: grid;
+    grid-gap: .75rem;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: .75rem;
+  }
+
+  &__link-content {
+    display: none;
+  }
+
+  &__download-app {
+    display: grid;
+    grid-gap: .75rem;
+    margin-bottom: 4rem;
+  }
+
+  @include breakpoint-lg {
+    text-align: left;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__content {
+      padding-left: 6rem;
+    }
+
+    picture {
+      order: 2;
+      max-width: 30rem;
+      margin-left: auto;
+    }
+
+    &__badges {
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+    }
+
+    &__badge-img {
+      border-radius: .75rem;
+      object-fit: cover;
+      width: 10rem;
+      height: auto;
+    }
+
+    &__link-content {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      grid-gap: 2rem;
+    }
+  }
+}

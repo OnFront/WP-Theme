@@ -1,0 +1,48 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    <div class="promotion" data-js-promotion>
+        <div class="container promotion__container">
+
+            <div class="promotion__image-wrapper">
+                {% include 'shared/webp/webp.twig' with {
+                    image: post.meta('intro').image,
+                    class: 'promotion__image'
+                } %}
+            </div>
+
+            <div>
+                <h1 class="mb-24 heading-xl promotion__heading">{{ post.meta('intro').header }}</h1>
+                <div class="mb-48 mb-lg-24 promotion__description">{{ post.meta('intro').description }}</div>
+
+                <div class="mb-48 promotion__search">
+                    <div>
+                        <div class="mb-08">{{ t.listPartnersPoints|t }}</div>
+                        {% include 'shared/input-search/input-search.twig' with {
+                            attr: 'data-js-search',
+                            placeholder: t.typeNamePoint|t,
+                        } %}
+                    </div>
+                    <div>
+                        <div class="mb-08">{{ t.category|t }}</div>
+                        <select name="selectCategories">
+                            <option value="">{{ t.termsAll|t }}</option>
+                            {% for term in categories %}
+                                <option value="{{ term.name }}" data-term-id="{{ term.ID }}">{{ term.meta('title')[translator.current] ?? term.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="promotion__items">
+                    {% for merchant in posts %}
+                        {% include 'pages/promotion/card/promotion-card.twig' with {
+                            delay: loop.index / 15
+                        } %}
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

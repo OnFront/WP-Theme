@@ -1,0 +1,38 @@
+<div class="customer-zone-application" id="application" data-js-customer-zone-application>
+    <div class="container customer-zone-application__container">
+
+        {% include 'shared/webp/webp.twig' with {
+            class: 'customer-zone-application__image'
+        } %}
+
+        <div class="customer-zone-application__content">
+            <h4 class="heading-xl mb-24">{{ acf.heading }}</h4>
+            <div class="mb-48 mb-lg-64 customer-zone-application__items">
+                {% for acf in acf.items %}
+                    <div class="customer-zone-application__item">
+                        {{ svg(asset('icon/li-check-circle.svg')) }}
+                        {{ acf.description }}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="customer-zone-application__link-content">
+                {% include 'shared/badges/badges.twig' with {
+                    class: 'customer-zone-application__badges',
+                    badgeClass: 'customer-zone-application__badge-img'
+                } %}
+                <div>
+                    <img src="{{ asset('icon/download-app/qr.svg') }}" alt="">
+                </div>
+            </div>
+            <div class="d-lg-none">
+                <div class="customer-zone-application__download-app">
+                    {{ t.mobileDownloadApp|t }}
+                    <a href="#" data-js-badge-link>
+                        <img src="" alt="" data-js-badge-image width="172px">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

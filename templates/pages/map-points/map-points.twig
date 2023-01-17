@@ -1,0 +1,34 @@
+{% extends "base.twig" %}
+
+{% block navigation %}
+    {% include 'navigation/nagivation.twig' with {
+        class: 'navigation--static-shadow'
+    } %}
+{% endblock %}
+
+{% block container %}
+    <div class="map-points" data-js-map-points>
+        <div class="container map-points__container">
+            <div class="map-points__list">
+                {% include 'pages/map-points/search/map-points-search.twig' %}
+
+                {% include 'pages/map-points/merchant/map-points-merchant.twig' %}
+
+                <div class="map-points__list-wrapper" data-js-map-points-list-wrapper>
+                    {% include 'pages/map-points/count/map-points-count.twig' %}
+                    {% cache cache.key %}
+                        {% include 'pages/map-points/list/map-points-list.twig' %}
+                    {% endcache %}
+                </div>
+
+                {% include 'pages/map-points/category/map-points-category.twig' %}
+            </div>
+        </div>
+
+        <div id="map" class="map-points__map"></div>
+        {% include 'shared/@google-map/google-map.twig' %}
+
+    </div>
+{% endblock %}
+
+{% block downloadApp %} {% endblock %}

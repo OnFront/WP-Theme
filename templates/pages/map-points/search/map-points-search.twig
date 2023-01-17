@@ -1,0 +1,12 @@
+<div class="map-points-search map-points-search--active" data-js-map-points-search>
+    <div class="d-none d-lg-block mb-lg-12 heading-md map-points-search__heading">{{ t.mapPointsSearchHeader|t }}</div>
+    <div class="map-points-search__search-filter">
+        {% include 'shared/input-search/input-search.twig' with {
+            attr: 'data-js-search',
+            placeholder: t.typeNamePoint|t,
+        } %}
+        <div class="map-points-search__filter-wrapper" data-js-open-category>
+            {{ svg(asset('shared/filtr.svg'),'map-points__filter') }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+.big-six-promo {
+    position: relative;
+
+    &__col--image {
+        display: none;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    .promotion {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      
+        &__heading {
+          text-align: center;
+        }
+      
+        &__description {
+          text-align: center;
+        }
+      
+        &__image-wrapper {
+          position: relative;
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+        
+        &__search {
+          display: grid;
+          grid-gap: .75rem;
+        }
+      
+        .custom-select__trigger,
+        .custom-select__options {
+          border-color: $grey-200;
+        }
+      }
+
+
+      @include breakpoint-lg {
+
+        .container {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        &__col--image {
+            display: block;
+            width: 80%;
+            position: relative;
+            padding-top: 3.375rem;
+        }
+
+        &__col--points {
+            width: 100%;
+        }
+
+        .promotion {
+            padding-bottom: 5rem;
+          
+            &__heading {
+              text-align: left;
+            }
+        
+            &__description {
+              text-align: left;
+            }
+          
+            &__items {
+              height: 30rem;
+              padding-left: 1.5rem;
+              overflow: auto;
+            }
+        
+            &__search {
+              grid-template-columns: auto auto;
+              grid-gap: .5rem;
+              align-items: flex-end;
+            }
+        }
+    }
+
+    @include breakpoint-xl {
+        &__col--image {
+            max-width: 29.75rem;
+            width: 100%;
+        }
+    }
+}
+
+  .page-template-PromotionBigSixController {
+    overflow-x: hidden;
+  }
+  

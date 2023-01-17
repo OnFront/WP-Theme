@@ -1,0 +1,36 @@
+.navigation-mobile-menu {
+  $block: '.navigation-mobile-menu';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 3.2rem;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__link {
+    position: relative;
+    color: $navy-800;
+    text-decoration: none;
+    padding: .75rem 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__triangle {
+    position: relative;
+    top: 2px;
+    margin-left: .5rem;
+    transition: transform ease-in-out .333s;
+  }
+
+  .accordion-open #{$block} {
+    &__triangle {
+      transform: rotate(90deg);
+    }
+  }
+}

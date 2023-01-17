@@ -1,0 +1,16 @@
+.heading-xl {
+  font-family: $font-family-point;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: $navy-800;
+  line-height: 2rem;
+
+  span {
+    color: $green-400;
+  }
+
+  @include breakpoint-lg {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}

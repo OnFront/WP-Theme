@@ -1,0 +1,31 @@
+<div class="media-filter" data-filter>
+
+    <div>
+        <div class="media-filter__select-title">{{ t.mediaMedium|t }}</div>
+        <select name="selectMedia" id="">
+            <option value="">{{ t.mediaSearch|t }}</option>
+
+            {% for term in mediaTerms %}
+                {% if term.parent > 0 and term.count %}
+                    <option value="{{ term.name }}" data-term-id="{{ term.ID }}">{{ term.name }}</option>
+                {% endif %}
+            {% endfor %}
+
+        </select>
+    </div>
+
+    <div>
+        <div class="media-filter__select-title">{{ t.category|t }}</div>
+        <select name="category" id="">
+            <option value="">{{ t.mediaAll|t }}</option>
+
+            {% for term in acf.taxonomies %}
+                <option value="{{ term.ID }}">
+                    {{ translator.pL ? term.title : term.meta('title')[translator.current] }}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+
+
+</div>

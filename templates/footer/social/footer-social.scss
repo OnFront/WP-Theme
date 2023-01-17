@@ -1,0 +1,20 @@
+.social-media {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  align-items: center;
+
+  &__svg {
+    fill: $navy-600;
+    width: 1.25rem;
+    transition: opacity ease-in-out .4s;
+  }
+
+  @include breakpoint-lg {
+    grid-gap: 1.25rem;
+
+    &__svg {
+      width: 1.5rem;
+    }
+  }
+}

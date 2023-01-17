@@ -1,0 +1,90 @@
+.promotion {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__description {
+    text-align: center;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    &:before {
+      position: absolute;
+      top: -10rem;
+      left: -50vw;
+      width: 200vw;
+      height: 100%;
+      content: '';
+      background-color: $green-100;
+      z-index: -1;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__container {
+    display: grid;
+    grid-gap: 3rem;
+  }
+
+  &__search {
+    display: grid;
+    grid-gap: .75rem;
+  }
+
+  .custom-select__trigger,
+  .custom-select__options {
+    border-color: $grey-200;
+  }
+
+  @include breakpoint-lg {
+    padding-bottom: 5rem;
+
+    &__container {
+      grid-template-columns: auto 1fr;
+      grid-gap: 4rem;
+      align-items: start;
+    }
+
+    &__heading {
+      text-align: left;
+    }
+
+    &__description {
+      text-align: left;
+    }
+
+    &__image-wrapper {
+      &:before {
+        top: 10rem;
+        left: -21vw;
+        width: calc(100% - 6rem + 21vw);
+        border-radius: 0 1.5rem 1.5rem 0;
+      }
+    }
+
+    &__items {
+      height: 30rem;
+      overflow: auto;
+    }
+
+    &__search {
+      grid-template-columns: auto auto;
+      grid-gap: .5rem;
+      align-items: flex-end;
+    }
+  }
+}
+
+.page-template-PromotionController {
+  overflow-x: hidden;
+}

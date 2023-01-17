@@ -1,0 +1,39 @@
+.about-us-biometric {
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 4rem;
+
+  img {
+    width: 100%;
+    max-width: 20.125rem;
+  }
+
+  @include breakpoint-lg {
+    text-align: left;
+    position: relative;
+    margin-bottom: 5rem;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: calc(50vw + 20rem);
+      height: 100%;
+      width: 100%;
+      content: '';
+      background-color: $green-100;
+      border-radius: 1.5rem 0 0 1.5rem;
+      z-index: -1;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      align-items: center;
+      grid-gap: 7.5rem;
+    }
+
+    img {
+      max-width: 30rem;
+    }
+  }
+}

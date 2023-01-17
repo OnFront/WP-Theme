@@ -1,0 +1,46 @@
+$path-font: '/wp-content/themes/payeye2.0/public/fonts';
+
+@font-face {
+  font-family: 'Point';
+  src: url('#{$path-font}/PointRegular.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Point';
+  src: url('#{$path-font}/PointSemiBold.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Point';
+  src: url('#{$path-font}/PointBold.otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Point';
+  src: url('#{$path-font}/PointExtraBold.otf');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PointSoft';
+  src: url('#{$path-font}/PointSoftRegular.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'PointSoft';
+  src: url('#{$path-font}/PointSoftSemiBold.otf');
+  font-style: normal;
+  font-weight: 600;
+}
+
+$font-family-point-soft: 'PointSoft', sans-serif;
+$font-family-point: 'Point', sans-serif;

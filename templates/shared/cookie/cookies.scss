@@ -1,0 +1,59 @@
+.cookies {
+  &-wrapper {
+    display: none; // JS change to display:block
+  }
+
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $color-white;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  padding: 1.9rem 0;
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    font-size: .75rem;
+    max-width: 40rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__btn-link {
+    border: 0;
+    background-color: transparent;
+    color: $color-primary;
+    border-bottom: 1px solid $color-primary;
+    padding: 0;
+    cursor: pointer;
+    margin: 1rem;
+  }
+
+  @include breakpoint-sm {
+    &__btn-link {
+      margin-right: 1.5rem;
+    }
+  }
+
+  @include breakpoint-xl {
+    &__body {
+      justify-content: space-between;
+    }
+  }
+}

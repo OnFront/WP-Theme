@@ -1,0 +1,23 @@
+{% if post.meta('big6settings').isEnable %}
+    <div class="front-big6-banner-mobile">
+
+        <img class="front-big6-banner-mobile__image" src="{{ acf.image.url }}" alt="">
+
+        <header class="front-big6-banner-mobile__header">
+            <div class="heading-xl front-big6-banner-mobile__title">
+                {{ acf.title }}
+            </div>
+
+            <div class="front-big6-banner-mobile__description">
+                {{ acf.description }}
+            </div>
+
+            <a class="front-big6-banner-mobile__btn" href="{{ acf.link.url }}">
+                <span class="arrow arrow--right front-big6-banner-mobile__arrow"></span>
+            </a>
+
+        </header>
+
+        <a class="front-big6-banner-mobile__btn-overlay" href="{{ acf.link.url }}"></a>
+    </div>
+{% endif %}

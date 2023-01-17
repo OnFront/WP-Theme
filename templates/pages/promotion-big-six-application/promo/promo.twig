@@ -1,0 +1,43 @@
+<section class="big-six-promo" data-js-promotion>
+    <div class="container">
+        <div class="big-six-promo__col big-six-promo__col--image">
+            {% if acf.image %}
+                <img class="big-six-promo__image" src="{{ acf.image.url }}" alt="{{ acf.image.alt }}">
+            {% endif %}
+        </div>
+        <div class="big-six-promo__col big-six-promo__col--points">
+            {% if acf.title %}
+                <h2 class="heading-xl big-six-promo__heading">{{ acf.title }}</h2>
+            {% endif %}
+
+            <div class="promotion">
+                <div class="mb-48 promotion__search">
+                    <div>
+                        <div class="mb-08">{{ t.listPartnersPoints|t }}</div>
+                        {% include 'shared/input-search/input-search.twig' with {
+                            attr: 'data-js-search',
+                            placeholder: t.typeNamePoint|t,
+                        } %}
+                    </div>
+                    <div>
+                        <div class="mb-08">{{ t.category|t }}</div>
+                        <select name="selectCategories">
+                            <option value="">{{ t.termsAll|t }}</option>
+                            {% for term in categories %}
+                                <option value="{{ term.name }}" data-term-id="{{ term.ID }}">{{ term.meta('title')[translator.current] ?? term.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="promotion__items">
+                    {% for merchant in posts %}
+                        {% include 'pages/promotion-application/card/promotion-application-card.twig' with {
+                            delay: loop.index / 15
+                        } %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

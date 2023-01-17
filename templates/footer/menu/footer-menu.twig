@@ -1,0 +1,8 @@
+<ul class="footer-menu">
+    {% for item in menu.items %}
+        <li>
+            <a class="footer-menu__link wow fadeInUp" href="{{ item.link }}"
+               data-wow-delay=".{{ loop.index }}s">{{ item.title }}</a>
+        </li>
+    {% endfor %}
+</ul>

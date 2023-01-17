@@ -1,0 +1,30 @@
+<section class="big-six-banner">
+    <div class="container">
+        <div class="big-six-banner__col big-six-banner__col--content">
+            <header class="big-six-banner__header">
+                {% if acf.title %}
+                    <h1 class="heading-xxl big-six-banner__heading">{{ acf.title }}</h1>
+                {% endif %}
+
+                {% if acf.description %}
+                    <p class="big-six-banner__description">{{ acf.description }}</p>
+                {% endif %}
+            </header>
+
+            <ul class="big-six-banner__list">
+                {% if acf.list.title %}
+                    <h2 class="heading-xl big-six-banner__list-heading"> {{ acf.list.title }}</h2>
+                {% endif %}
+
+                {% for acf in acf.list.items  %}
+                    <li class="big-six-banner__list-item">{{ svg(asset('icon/li-check-circle.svg'), 'big-six-banner__list-icon' ) }}{{ acf.item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="big-six-banner__col big-six-banner__col--image">
+            {% if acf.image %}
+                <img class="big-six-banner__image" src="{{ acf.image.url }}" alt="{{ acf.image.alt }}">
+            {% endif %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,23 @@
+{# @var merchant \App\Core\Post\MerchantPost #}
+{# @var branch \App\Core\Post\Merchant\Branch #}
+
+{% set branch = merchant.branches|first %}
+{% set isJustOneBranch = merchant.countActiveBranches == 1 %}
+
+<a class="promotion-card {{ class }}" data-wow-delay="{{ delay }}s" data-partner-id="{{ merchant.ID }}"
+   href="{{ store.theme.main.payEyePointsUrl }}?query={{ merchant.title }}"
+   data-term-id="{{ merchant.category.ID }}">
+
+    <img class="promotion-card__logo" src="{{ merchant.logo ? Image(merchant.logo): asset('icon/layout/partner-placeholder.svg') }}" alt="">
+    <div>
+        <div class="mb-08 heading-sm">{{ merchant.title }}</div>
+
+        {% if isJustOneBranch %}
+            <div class="mb-08 promotion-card__address">{{ branch.address.street ~ ', ' ~ branch.address.city }}</div>
+        {% else %}
+            <div class="mb-08 promotion-card__address">{{ branch.address.city }}</div>
+        {% endif %}
+
+        <div class="heading-sm promotion-card__discount">{{ merchant.promotion.title }}</div>
+    </div>
+</a>

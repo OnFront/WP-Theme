@@ -1,0 +1,31 @@
+<div class="contact-addresses">
+    <div class="mb-32 heading-lg">{{ acf.header }}</div>
+
+    <div class="contact-addresses__items">
+
+        <div class="contact-addresses__item">
+            {{ svg(asset('shared/home.svg'),'contact-addresses__icon') }}
+            <div>
+                <div class="mb-04 mb-lg-12 heading-sm">{{ acf.main.title }}</div>
+                <div class="contact-addresses__address">
+                    {{ acf.main.address }}
+                    <span class="contact-addresses__city">{{ acf.main.city }}</span>
+                </div>
+            </div>
+        </div>
+
+        {% for acf in acf.branches %}
+            <div class="contact-addresses__item">
+                {{ svg(asset('shared/place.svg'),'contact-addresses__icon') }}
+                <div>
+                    <div class="mb-12 heading-sm">{{ acf.title }}</div>
+                    <div class="contact-addresses__address">
+                        {{ acf.address }}
+                        <span class="contact-addresses__city">{{ acf.city }}</span>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>

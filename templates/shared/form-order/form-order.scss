@@ -1,0 +1,26 @@
+.form-order {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  &__grid {
+    display: grid;
+    grid-gap: 4rem;
+  }
+
+  &__image {
+    padding: 0 1.5rem;
+  }
+
+  @include breakpoint-lg {
+    padding-top: 4.5rem;
+
+    &__grid {
+      grid-gap: 7rem;
+      grid-template-columns: auto 1fr;
+    }
+
+    &__image {
+      padding: 0;
+    }
+  }
+}

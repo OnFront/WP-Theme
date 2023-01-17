@@ -1,0 +1,26 @@
+<div class="front-intro-desktop">
+    <div class="container front-intro-desktop__grid">
+        {% for acf in acf.items %}
+            <div class="front-intro-desktop__card">
+                <div class="front-intro-desktop__image-wrapper">
+                    {% include 'shared/webp/webp.twig' with {
+                        image: acf.imageDesktop.standard,
+                        classPicture: 'front-intro-desktop__image-static'
+                    } %}
+                    {% include 'shared/webp/webp.twig' with {
+                        image: acf.imageDesktop.standard,
+                        classPicture: 'front-intro-desktop__image front-intro-desktop__image--standard'
+                    } %}
+                    {% include 'shared/webp/webp.twig' with {
+                        image: acf.imageDesktop.active,
+                        classPicture: 'front-intro-desktop__image front-intro-desktop__image--active'
+                    } %}
+                </div>
+                <div class="heading-xl front-intro-desktop__heading">{{ acf.heading }}</div>
+                <div class="front-intro-desktop__description">{{ acf.description }}</div>
+                {% include 'shared/button-solid/button-solid.twig' %}
+                <a class="front-intro-desktop__btn-overlay" href="{{ acf.btn.url }}"></a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

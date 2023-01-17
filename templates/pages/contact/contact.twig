@@ -1,0 +1,18 @@
+{% extends "base.twig" %}
+
+{% block container %}
+    <div class="contact" data-js-contact>
+        <div class="container contact__grid">
+            <div class="contact__card contact__card--data">
+                {% include 'pages/contact/data-company/contact-data-company.twig' with {acf : post.meta('data_company')} %}
+                {% include 'pages/contact/customer-service/contact-customer-service.twig' with {acf : post.meta('customer_service_center')} %}
+                {% include 'pages/contact/addresses/contact-addresses.twig' with {acf : post.meta('addresses')} %}
+                {% include 'pages/contact/emails/contact-emails.twig' with {acf : post.meta('addresses_email')} %}
+            </div>
+
+            <div class="contact__card contact__card--contact">
+                {% include 'pages/contact/form/contact-form.twig' with {acf : post.meta('form')} %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

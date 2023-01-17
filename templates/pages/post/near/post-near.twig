@@ -1,0 +1,15 @@
+<div class="near-post">
+    <div class="container near-post__body">
+        {% include 'pages/post/neighbor/post-neighbor.twig' with {
+            post: post.prev,
+            prev: 1
+        } %}
+
+        {% include 'pages/post/neighbor/post-neighbor.twig' with {
+            post: post.next,
+            prev: 0
+        } %}
+    </div>
+</div>
+
+

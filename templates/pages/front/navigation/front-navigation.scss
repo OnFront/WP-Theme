@@ -1,0 +1,24 @@
+.front-navigation {
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__language-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include breakpoint-header-desktop {
+
+    &__body {
+      justify-content: center;
+    }
+
+    &__language-wrapper {
+      display: none;
+    }
+  }
+}
