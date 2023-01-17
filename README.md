@@ -83,7 +83,7 @@ Theme support MVC architecture by using own custom framework and **Timber** bund
 
 ### JS
 
-- Vanilla JS http://vanilla-js.com/
+- Vanilla JS 
 
 
 
